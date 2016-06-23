@@ -4,8 +4,9 @@
 # Created Time: 2016年06月23日 星期四 18时33分36秒
 #########################################################################
 #!/bin/bash
+set -x
 git pull oringe master;
 git add -A;
 git commit -m $1 ;
 git push oringe master;
-
+set +x
