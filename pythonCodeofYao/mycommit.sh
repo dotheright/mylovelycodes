@@ -5,8 +5,8 @@
 #########################################################################
 #!/bin/bash
 set -x
-git pull oringe master;
+git pull origin master;
 git add -A;
 git commit -m "$1" ;
-git push oringe master;
+git push origin master;
 set +x
