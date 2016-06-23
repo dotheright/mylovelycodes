@@ -10,6 +10,8 @@ nor comprehend passion from intuition
 and requires an explanation
 \n\t\t where there is none
 """
+a=100
+b=2
 print "-------------------------------"
 print poem
 print "-------------------------------"
@@ -28,3 +30,9 @@ start_point = 10000
 beans,jars,crates=secret_formula(start_point)
 
 print "with a starting  of  %d " % start_point
+print "we'd have %d beans .%d jars and %d crates."%(beans,jars,crates)
+
+start_point =start_point/10
+
+print  "we can also do that  this way"
+print "we'd have %d beans .%d jars and %d crates."%secret_formula(start_point)
