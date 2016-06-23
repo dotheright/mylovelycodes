@@ -7,6 +7,6 @@
 set -x
 git pull oringe master;
 git add -A;
-git commit -m $1 ;
+git commit -m "$1" ;
 git push oringe master;
 set +x
