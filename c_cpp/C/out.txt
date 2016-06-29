@@ -1,0 +1,10 @@
+ctemp = 1 
+ctemp = 2 
+ctemp = 33 
+ctemp = 0 
+ctemp = -127 
+ctemp = -1 
+ctemp = 1 
+sum100 = 4950 
+sum250 = 23454548 
+long long = 18446744073709551615 

@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>算法洗脑系列 - 随笔分类 - 一线码农 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=umTYGJ1Xbo61obX_Gqsil3krUSBXOilTLax6nesdN401"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/iMetro_HD/bundle-iMetro_HD.css?v=LB0Nt-WUQuLcxcyW_sZ5y1ZtDWL9LKn4F39H-3pjDYs1"/>
+<link type="text/css" rel="stylesheet" href="/blog/customcss/85195.css?v=wA%2f%2bm9Lr3IfXwfhNSuKjP%2byZRHM%3d"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/huangxincheng/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/huangxincheng/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/huangxincheng/wlwmanifest.xml"/>
+<script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'huangxincheng', cb_enable_mathjax=false;</script>
+<script src="/bundles/blog-common.js?v=XKoehlJN5H21FBVcSKsnT53hGsKVYw1yJ99ZTW__hhA1" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/huangxincheng/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/huangxincheng/"></a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="MyLinks1_HomeLink" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li><a id="MyLinks1_MyHomeLink" class="menu" href="http://www.cnblogs.com/huangxincheng/">首页</a></li>
+<li><a id="MyLinks1_NewPostLink" class="menu" rel="nofollow" href="http://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="MyLinks1_ContactLink" class="menu" rel="nofollow" href="http://msg.cnblogs.com/send/%E4%B8%80%E7%BA%BF%E7%A0%81%E5%86%9C">联系</a></li>
+<li><a id="MyLinks1_Syndication" class="menu" href="http://www.cnblogs.com/huangxincheng/rss">订阅</a>
+<!--<a id="MyLinks1_XMLLink" class="aHeaderXML" href="http://www.cnblogs.com/huangxincheng/rss"><img src="http://www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="MyLinks1_Admin" class="menu" rel="nofollow" href="http://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			
+<span id="stats_post_count">随笔 - 220&nbsp; </span>
+<span id="stats_article_count">文章 - 1&nbsp; </span>
+<span id="stats-comment_count">评论 - 3830</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+
+<!--done-->
+
+
+<div class="entrylist">
+	<h1 class="entrylistTitle">随笔分类 - 算法洗脑系列</h1>
+	<div class="entrylistDescription"></div>
+	
+			<div class="entrylistItem">
+				<div class="entrylistPosttitle"><a id="CategoryEntryList1_EntryStoryList_ctl00_Entries_TitleUrl_0" class="entrylistItemTitle" href="http://www.cnblogs.com/huangxincheng/p/3604198.html">看。。。很多算法问题都能找到它的现实原型</a></div>
+				<div class="entrylistPostSummary"><div class="c_b_p_desc">摘要: 昨晚在家看 “南洋十大邪术”，又发现徐锦江了，果然是在情色片中起家的，起兴处。。。被以前学校的一个小师弟抖屏搅了。。。悲剧！由于金三银四的好时期，小师弟也跑去找工作了，也就碰到了各种各样的面试题，然后也就引出了今天的这篇博文，就是：如何产生1-100之间的100个不重复的随机数，不过这里还好，在携程面试.net是没有笔试的:-) 如果这是你是第一次看到这个题目，也许你的想法有很多。1：首先从原始数组中随机选择一个数字，然后将该数字从数组中剔除，再随记选，再剔除，重复99次，就解决了。 我们知道从数组中剔除一个元素的复杂度为O（N)，那么随机选取n个数字，它的复杂度就是O(N2)了。...<a href="http://www.cnblogs.com/huangxincheng/p/3604198.html" class="c_b_p_desc_readmore">阅读全文</a></div></div>				
+				<div class="entrylistItemPostDesc">posted @ <a href="http://www.cnblogs.com/huangxincheng/p/3604198.html" Title = "permalink">2014-03-16 23:29</a> 一线码农 阅读(3933) | <a href="http://www.cnblogs.com/huangxincheng/p/3604198.html#FeedBack" Title = "comments, pingbacks, trackbacks">评论 (12)</a>  <a href ="http://i.cnblogs.com/EditPosts.aspx?postid=3604198" rel="nofollow">编辑</a></div>
+			</div>
+		
+			<div class="postSeparator"></div>
+		
+			<div class="entrylistItem">
+				<div class="entrylistPosttitle"><a id="CategoryEntryList1_EntryStoryList_ctl00_Entries_TitleUrl_1" class="entrylistItemTitle" href="http://www.cnblogs.com/huangxincheng/archive/2012/02/14/2350275.html">算法洗脑系列（8篇）——第八篇 概率思想</a></div>
+				<div class="entrylistPostSummary"><div class="c_b_p_desc">摘要: 今天写最后一篇来结束这个系列，我们知道很多算法解决问题的步骤都是固定的，而概率算法每一步的选择都是随机的，当在某些领域问题中通常比最优选择省时，所以就大大提高了算法的效率，降低了复杂度。一：思想 这里主要讲一下“数值概率算法”，该算法常用于解决数值计算问题，并且往往只能求得问题的近似解，同一个问题同样的概率算法求解两次可能得到的结果大不一样，不过没关系，这种“近似解”会随时间的增加而越接近问题的解。二：特征 现实生活中，有很多问题我们其实都得不到正确答案，只能得到近似解，比如“抛硬币”求出正面向上的概率，”抛骰子“出现1点的概率，再如：求“无理数π”的值，计算&quot;“定积分”等等。针..<a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/14/2350275.html" class="c_b_p_desc_readmore">阅读全文</a></div></div>				
+				<div class="entrylistItemPostDesc">posted @ <a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/14/2350275.html" Title = "permalink">2012-02-14 00:57</a> 一线码农 阅读(7566) | <a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/14/2350275.html#FeedBack" Title = "comments, pingbacks, trackbacks">评论 (4)</a>  <a href ="http://i.cnblogs.com/EditPosts.aspx?postid=2350275" rel="nofollow">编辑</a></div>
+			</div>
+		
+			<div class="postSeparator"></div>
+		
+			<div class="entrylistItem">
+				<div class="entrylistPosttitle"><a id="CategoryEntryList1_EntryStoryList_ctl00_Entries_TitleUrl_2" class="entrylistItemTitle" href="http://www.cnblogs.com/huangxincheng/archive/2012/02/13/2349664.html">算法洗脑系列（8篇）——第七篇 动态规划</a></div>
+				<div class="entrylistPostSummary"><div class="c_b_p_desc">摘要: 今天跟大家分享下算法思想中比较难的一种&quot;动态规划&quot;，动态规划给人像是作战时常用的“迂回战术”，或者说是游击战，在运动中寻找突破口。一： 思想 首先要了解”动态规划“，必须先知道什么叫做”多阶段决策“，百科里面对这个问题解释的很全，我就load一段出来，大家得要好好品味，好好分析。上面图中最后一句话就定义了动态规划是要干什么的问题。二：使用规则 现在我们知道动态规划要解决啥问题了，那么什么情况下我们该使用动态规划呢？ ① 最优化原理（最优子结构性质）： 如果一个问题的最优策略它的子问题的策略也是最优的，则称该问题具有“最优子结构性质”。 ② 无后效性： 当一个问题被划分为多.<a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/13/2349664.html" class="c_b_p_desc_readmore">阅读全文</a></div></div>				
+				<div class="entrylistItemPostDesc">posted @ <a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/13/2349664.html" Title = "permalink">2012-02-13 16:59</a> 一线码农 阅读(6125) | <a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/13/2349664.html#FeedBack" Title = "comments, pingbacks, trackbacks">评论 (3)</a>  <a href ="http://i.cnblogs.com/EditPosts.aspx?postid=2349664" rel="nofollow">编辑</a></div>
+			</div>
+		
+			<div class="postSeparator"></div>
+		
+			<div class="entrylistItem">
+				<div class="entrylistPosttitle"><a id="CategoryEntryList1_EntryStoryList_ctl00_Entries_TitleUrl_3" class="entrylistItemTitle" href="http://www.cnblogs.com/huangxincheng/archive/2012/02/08/2342111.html">算法洗脑系列（8篇）——第六篇 回溯思想</a></div>
+				<div class="entrylistPostSummary"><div class="c_b_p_desc">摘要: 记得广告中经常听到过，抱着试试看的态度买了3个疗程，效果不错........ 也经常听人说过什么车到山前必有路，船到桥头自然直。哈哈，这种思想就是回溯思想，也可称为试探思想。一： 思想 有时我们要得到问题的解，先从其中某一种情况进行试探，在试探过程中，一旦发现原来的选择是错误的，那么就退回一步重新选择， 然后继续向前试探，反复这样的过程直到求出问题的解。二：场景 回溯思想是一个非常重要的思想，应用场景也是非常广泛。 ① “下棋”： 每一次走棋的位置都要考虑到是否是损人利己，如果是害人害己的走法就要回撤，找下一步损人利己的走法。 ② “迷宫”： 这种问题用试探法来...<a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/08/2342111.html" class="c_b_p_desc_readmore">阅读全文</a></div></div>				
+				<div class="entrylistItemPostDesc">posted @ <a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/08/2342111.html" Title = "permalink">2012-02-08 00:08</a> 一线码农 阅读(5177) | <a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/08/2342111.html#FeedBack" Title = "comments, pingbacks, trackbacks">评论 (18)</a>  <a href ="http://i.cnblogs.com/EditPosts.aspx?postid=2342111" rel="nofollow">编辑</a></div>
+			</div>
+		
+			<div class="postSeparator"></div>
+		
+			<div class="entrylistItem">
+				<div class="entrylistPosttitle"><a id="CategoryEntryList1_EntryStoryList_ctl00_Entries_TitleUrl_4" class="entrylistItemTitle" href="http://www.cnblogs.com/huangxincheng/archive/2012/02/07/2340797.html">算法洗脑系列（8篇）——第五篇 分治思想</a></div>
+				<div class="entrylistPostSummary"><div class="c_b_p_desc">摘要: 由于最近工作比较忙，好长时间都没有更新博客了，今天就分享下分治思想。一： 思想 有时候我们处理一个复杂的问题，可能此问题求解步骤非常杂，也可能是数据非常多，导致我们当时很难求出或者无法求出，古语有云：步步为营，各个击破，这个思想在算法中称为分治思想，就是我们可以将该问题分解成若干个子问题，然后我们逐一解决子问题，最后将子问题的答案组合成整个问题的答案。二: 条件 当然各个思想都有它的使用领域，所以玩这场分治游戏就要遵守它的游戏规则。 ① 求解问题确实能够分解成若干个规模较小的子问题，并且这些子问题最后能够实现接近或者是O（1）时间求解。 ② 各个子问题之间不能有依赖关系，并...<a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/07/2340797.html" class="c_b_p_desc_readmore">阅读全文</a></div></div>				
+				<div class="entrylistItemPostDesc">posted @ <a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/07/2340797.html" Title = "permalink">2012-02-07 01:32</a> 一线码农 阅读(6281) | <a href="http://www.cnblogs.com/huangxincheng/archive/2012/02/07/2340797.html#FeedBack" Title = "comments, pingbacks, trackbacks">评论 (16)</a>  <a href ="http://i.cnblogs.com/EditPosts.aspx?postid=2340797" rel="nofollow">编辑</a></div>
+			</div>
+		
+			<div class="postSeparator"></div>
+		
+			<div class="entrylistItem">
+				<div class="entrylistPosttitle"><a id="CategoryEntryList1_EntryStoryList_ctl00_Entries_TitleUrl_5" class="entrylistItemTitle" href="http://www.cnblogs.com/huangxincheng/archive/2012/01/07/2315945.html">算法洗脑系列（8篇）——第四篇 枚举思想</a></div>
+				<div class="entrylistPostSummary"><div class="c_b_p_desc">摘要: 今天分享一下枚举思想，这种思想也常是码畜，码奴常用的手段，经常遭到码农以上级别的鄙视，枚举思想可以说是在被逼无奈时最后的狂吼。一： 思想 有时我们解决某个问题时找不到一点规律，此时我们很迷茫，很痛苦，很蛋疼，突然我们灵光一现，发现候选答案的问题规模在百万之内，此时我们就想到了从候选答案中逐一比较，一直找到正确解为止。二: 条件 前面也说了，枚举是我们在无奈之后的最后一击，那么使用枚举时我们应该尽量遵守下面的两个条件。 ① 地球人都不能给我找出此问题的潜在规律。 ② 候选答案的集合是一个计算机必须能够承受的。三：举例 下面是一个填写数字的模板，其中每个字都代表数字中的”0~9“，...<a href="http://www.cnblogs.com/huangxincheng/archive/2012/01/07/2315945.html" class="c_b_p_desc_readmore">阅读全文</a></div></div>				
+				<div class="entrylistItemPostDesc">posted @ <a href="http://www.cnblogs.com/huangxincheng/archive/2012/01/07/2315945.html" Title = "permalink">2012-01-07 19:09</a> 一线码农 阅读(5413) | <a href="http://www.cnblogs.com/huangxincheng/archive/2012/01/07/2315945.html#FeedBack" Title = "comments, pingbacks, trackbacks">评论 (17)</a>  <a href ="http://i.cnblogs.com/EditPosts.aspx?postid=2315945" rel="nofollow">编辑</a></div>
+			</div>
+		
+			<div class="postSeparator"></div>
+		
+			<div class="entrylistItem">
+				<div class="entrylistPosttitle"><a id="CategoryEntryList1_EntryStoryList_ctl00_Entries_TitleUrl_6" class="entrylistItemTitle" href="http://www.cnblogs.com/huangxincheng/archive/2012/01/03/2311383.html">算法洗脑系列（8篇）——第三篇 贪心思想</a></div>
+				<div class="entrylistPostSummary"><div class="c_b_p_desc">摘要: 说到“贪”字，很邪恶的一个词，记得和珅和大人拆解过这个字，为”今“和”贝“，而”贝“字分解成”上面的那个XX“和”人“，意思就是说今天你贪了，明天一座监狱就把你套起来，纵观古今，有多少豪杰与&quot;贪“结下了不解之缘，呵呵，扯远了。 这个贪心的行为在算法中也成为了一种指导思想，也就是说贪心算法所作出的选择在当时的环境下是最好的，说深一点就是它只是某种意义上的局部最优解，但不一定是全局最优解，此时往往接近于最优解。一： 优点 前面也说了，贪心只是求的当前环境下的最优解，而不是追究整体的最优解，所以贪心就避免了为求的整体最优解而枚举各种方案所耗费的时间。二： 问题 ① 不能保证贪心所得出的解是<a href="http://www.cnblogs.com/huangxincheng/archive/2012/01/03/2311383.html" class="c_b_p_desc_readmore">阅读全文</a></div></div>				
+				<div class="entrylistItemPostDesc">posted @ <a href="http://www.cnblogs.com/huangxincheng/archive/2012/01/03/2311383.html" Title = "permalink">2012-01-03 22:29</a> 一线码农 阅读(5948) | <a href="http://www.cnblogs.com/huangxincheng/archive/2012/01/03/2311383.html#FeedBack" Title = "comments, pingbacks, trackbacks">评论 (3)</a>  <a href ="http://i.cnblogs.com/EditPosts.aspx?postid=2311383" rel="nofollow">编辑</a></div>
+			</div>
+		
+			<div class="postSeparator"></div>
+		
+			<div class="entrylistItem">
+				<div class="entrylistPosttitle"><a id="CategoryEntryList1_EntryStoryList_ctl00_Entries_TitleUrl_7" class="entrylistItemTitle" href="http://www.cnblogs.com/huangxincheng/archive/2011/12/30/2306875.html">算法洗脑系列（8篇）——第二篇 递归思想</a></div>
+				<div class="entrylistPostSummary"><div class="c_b_p_desc">摘要: 今天说说递归思想，在我们编码时，有的时候递归能够让我们的算法更加通俗易懂，并且代码量也是大大的减少。比如我先前的系列中说到了关于树的“先序，中序和后序”遍历，那么看看用递归来描叙这个问题是多少的简洁，多么的轻松。 1 #region 二叉树的先序遍历 2 /// &lt;summary&gt; 3 /// 二叉树的先序遍历 4 /// &lt;/summary&gt; 5 /// &lt;typeparam name=&quot;T&quot;&gt;&lt;/typeparam&gt; 6 /// &lt;param name=&quot;tree&quot;&gt;&lt;/param&g<a href="http://www.cnblogs.com/huangxincheng/archive/2011/12/30/2306875.html" class="c_b_p_desc_readmore">阅读全文</a></div></div>				
+				<div class="entrylistItemPostDesc">posted @ <a href="http://www.cnblogs.com/huangxincheng/archive/2011/12/30/2306875.html" Title = "permalink">2011-12-30 02:01</a> 一线码农 阅读(7866) | <a href="http://www.cnblogs.com/huangxincheng/archive/2011/12/30/2306875.html#FeedBack" Title = "comments, pingbacks, trackbacks">评论 (18)</a>  <a href ="http://i.cnblogs.com/EditPosts.aspx?postid=2306875" rel="nofollow">编辑</a></div>
+			</div>
+		
+			<div class="postSeparator"></div>
+		
+			<div class="entrylistItem">
+				<div class="entrylistPosttitle"><a id="CategoryEntryList1_EntryStoryList_ctl00_Entries_TitleUrl_8" class="entrylistItemTitle" href="http://www.cnblogs.com/huangxincheng/archive/2011/12/29/2305525.html">算法洗脑系列（8篇）——第一篇 递推思想</a></div>
+				<div class="entrylistPostSummary"><div class="c_b_p_desc">摘要: 像俺一样奋斗在一线的码农们，一谈到学编程，都是说要学会XX语言就OK了，其实我们理解的有一点点的偏差，因为我们只说到了三分之一，其实真正的编程应该是：编程=数据结构+算法+XX语言。 对的，XX语言只是一个工具而已，就好比我们知道用笔来写字，但是不见得我们就能写出一手让张恨水为之倾倒的好字，其实我也说过算法不仅仅用于程序设计中，在我们的生活中也处处存在着算法，比如记得我大二学C#的时候，无聊的我们就出了个猜美女芳龄的问题。 1 static void Main(string[] args) 2 { 3 Random random = new Ra...<a href="http://www.cnblogs.com/huangxincheng/archive/2011/12/29/2305525.html" class="c_b_p_desc_readmore">阅读全文</a></div></div>				
+				<div class="entrylistItemPostDesc">posted @ <a href="http://www.cnblogs.com/huangxincheng/archive/2011/12/29/2305525.html" Title = "permalink">2011-12-29 01:41</a> 一线码农 阅读(14952) | <a href="http://www.cnblogs.com/huangxincheng/archive/2011/12/29/2305525.html#FeedBack" Title = "comments, pingbacks, trackbacks">评论 (51)</a>  <a href ="http://i.cnblogs.com/EditPosts.aspx?postid=2305525" rel="nofollow">编辑</a></div>
+			</div>
+		
+	<p>
+	
+	</p>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2016 一线码农
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+</body>
+</html>
+

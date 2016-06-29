@@ -1,1 +1,7 @@
 *.pyc
+*.o
+*.exe
+*.out
+*.class
+*.bin
+
