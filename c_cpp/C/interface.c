@@ -1,0 +1,4 @@
+int defend_IsNeed()
+{
+
+}
