@@ -1,11 +1,13 @@
 /*************************************************************************
-	> File Name: Hello.java
+	> File Name: pow.cpp
 	> Author: guoqingyao
 	> Mail: stepbystepto@163.com 
-	> Created Time: 2016年02月08日 星期一 14时49分47秒
+	> Created Time: 2016年06月29日 星期三 18时29分25秒
  ************************************************************************/
-public class Hello{
-	public static void main(String [] s){
-	System.out.println("Hello world!");
-	}
+
+#include<iostream>
+using namespace std;
+int main ()
+{
+	
 }
