@@ -1,1 +1,0 @@
-cmd_/home/dotheright/mylovelycodes/linux_c/kernel/hellomode.ko := ld -r -m elf_i386 -T ./scripts/module-common.lds --build-id  -o /home/dotheright/mylovelycodes/linux_c/kernel/hellomode.ko /home/dotheright/mylovelycodes/linux_c/kernel/hellomode.o /home/dotheright/mylovelycodes/linux_c/kernel/hellomode.mod.o
