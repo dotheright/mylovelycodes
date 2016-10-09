@@ -24,8 +24,7 @@ static int __init mymod_init(void)
         list_for_each_entry(pmod,THIS_MODULE->list.prev,list)
         {
                 if(strcmp(pmod->name,"mymod") ==0)
-                { 
-
+                {
                         // 模块名、模块状态、引用计数
                         printk(KERN_ALERT"init     name:%s state:%d refcnt:%u ",pmod->name,pmod->state,module_refcount(pmod));
                         // 把target的引用计数置为0
