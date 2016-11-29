@@ -3,6 +3,12 @@
 	</head>
     <body>
 		<script>
+        var sentence = "This is a  list of iterms:cherries,limes,oranges,apples."
+        var start = sentence.indexOf(":");
+        var end   = sentence.indexOf(".",start+1);
+        var listStr = sentence.substring(start+1,end);
+        var fruits = listStr.split(',');
+        document.write(fruits);
 		document.write("hello world!");
 		debugger;
 		</script>
