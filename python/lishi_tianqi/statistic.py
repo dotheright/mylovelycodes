@@ -17,17 +17,18 @@ getUrlSet()
 #print urlList
 
 url ="http://lishi.tianqi.com/wuhan/201101.html"
-response = urllib2.urlopen(url.encode('gbk'));
-html_doc = response.read()
+for url in urlList:
+    response = urllib2.urlopen(url.encode('gbk'));
+    html_doc = response.read()
 
-css_soup = BeautifulSoup(html_doc, 'html.parser') 
-table_tag = css_soup.find("div", class_="tqtongji2");
-#   print table_soup;
+    css_soup = BeautifulSoup(html_doc, 'html.parser') 
+    table_tag = css_soup.find("div", class_="tqtongji2");
+    print table_tag;
 
 
-for  u in table_tag:    
-    for l in u:
-        print l
+#for  u in table_tag:    
+#    for l in u:
+#        print l
 
 
 
