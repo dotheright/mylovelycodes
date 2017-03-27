@@ -10,6 +10,7 @@
 int main()
 {
 	int  i = 0;
+
 	for(i=0;i<9999999 ;i= i+9)
 	{
 		if(i%8==1)
