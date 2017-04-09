@@ -2,9 +2,13 @@ package main
 
 import "fmt"
 
-func main(){
-	var a string ="abc"
+const mask = 1 << 3 
 
-	fmt.Println("Hello ,world!",a);
+//const home = os.GetEnv("HOME")
+
+func main(){
+	var a  ="abc"
+
+	fmt.Println("Hello ,world!",a,mask);
 }
 
