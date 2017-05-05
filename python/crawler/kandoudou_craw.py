@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 #coding  = utf-8
+
 import urllib2
 from bs4 import BeautifulSoup
 import threading
@@ -27,7 +28,7 @@ def downPagefromto(start,end):
         try:
             html_doc = urllib2.urlopen(url)
         except Exception as e:
-            print e
+            print e:
             break
         accept =getAPagehref(html_doc)
         if ( None == accept ):
