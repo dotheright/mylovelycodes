@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ERR	msg.c	11;"	d	file:
+ERR	pipe_ad.c	9;"	d	file:
+K	pipe_ad.c	7;"	d	file:
+WRITE_LEN	pipe_ad.c	8;"	d	file:
+main	execve.c	/^int main()$/;"	f
+main	msg.c	/^int main()$/;"	f
+main	pid.c	/^int main()$/;"	f
+main	pipe.c	/^int main()$/;"	f
+main	pipe_ad.c	/^int main()$/;"	f
+main	simple_thread.c	/^int main()$/;"	f
+main	system.c	/^int main()$/;"	f
+mbuf	msg.c	/^	char mbuf[32];$/;"	m	struct:msgbuf	file:	access:public
+msg_buf	msg.c	/^}msg_buf ;$/;"	t	typeref:struct:msgbuf	file:
+msgbuf	msg.c	/^typedef struct msgbuf$/;"	s	file:
+msgbuf::mbuf	msg.c	/^	char mbuf[32];$/;"	m	struct:msgbuf	file:	access:public
+msgbuf::mtype	msg.c	/^	int  mtype;$/;"	m	struct:msgbuf	file:	access:public
+mtype	msg.c	/^	int  mtype;$/;"	m	struct:msgbuf	file:	access:public
+show_msginfo	msg.c	/^void  show_msginfo(int msg_id )$/;"	f	signature:(int msg_id )
+thread	simple_thread.c	/^void thread()$/;"	f
