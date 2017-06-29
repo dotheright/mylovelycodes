@@ -6,7 +6,7 @@ for  a   in  range(101):
 print a,sum
 
 
-def dayin(s,a):
+def myprint(s,a):
     print "name is",s,",age is",a
 
-dayin('yujing',20)
+myprint('yujing',20)
