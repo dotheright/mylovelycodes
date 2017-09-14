@@ -1,8 +1,12 @@
-/*
-注：这个list.h 是为了配合示例程序而建的，内容来自：linux/include/linux/list.h 和相关文件
-*/
-#ifndef _LINUX_LIST_H
-#define _LINUX_LIST_H
+/*************************************************************************
+    > File Name: my_list.h
+    > Author: guoqingyao
+    > Mail: stepbystepto@163.com 
+    > Created Time: 2017年09月15日 星期五 23时46分58秒
+内容来自：linux/include/linux/list.h 和相关文件
+************************************************************************/
+#ifndef _MY_LIST_H
+#define _MY_LIST_H
  
 typedef struct list_head {
          struct list_head *next, *prev;
@@ -36,7 +40,20 @@ static inline void list_add(struct list_head *new, struct list_head *head)
 {
         __list_add(new, head, head->next);
 }
- 
+
+/**
+ * list_add_tail - add a new entry
+ * @new: new entry to be added
+ * @head: list head to add it before
+ *
+ * Insert a new entry before the specified head.
+ * This is useful for implementing queues.
+ */
+static inline void list_add_tail(struct list_head *new, struct list_head *head)
+{
+        __list_add(new, head->prev, head);
+}
+
  
 static inline void __list_del(struct list_head * prev, struct list_head * next)
 {
