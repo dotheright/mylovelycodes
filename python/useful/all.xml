@@ -1,0 +1,22 @@
+<all>
+<admin>
+<english>
+<element name="123" url="firewall.asp"/>
+<element name="321" url="all.asp"/>
+</english>
+</admin>
+<user>
+<english>
+<element name="1" url="first.asp"/>
+<element name="123" url="firewall.asp"/>
+<element name="321" url="all.asp"/>
+</english>
+</user>
+<com>
+<english>
+<element name="1" url="first.asp"/>
+<element name="123" url="firewall.asp"/>
+<element name="321" url="all.asp"/>
+</english>
+</com>
+</all>
