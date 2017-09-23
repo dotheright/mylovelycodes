@@ -4,4 +4,4 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def welcom(request):
-    return HttpResponse("<h1>Welcome to my tiny twitter !</h1>")
+    return HttpResponse("<h1>Welcome to my tiny space !</h1>")
