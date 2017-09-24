@@ -1,40 +1,62 @@
 #include <stdio.h> 
 #include <string.h>
-#include "my_list.h"    
+#include <stdlib.h>
+#include "my_list.h"
+#include "assert.h" 
 
+#define MAX_STU  128
 #define MAX_NAME_LEN 32
-#define MAX_ID_LEN 10
+#define MAX_ID_LEN 12
+
 
 typedef struct stud
 {
     LIST_HEAD list;
     char name[MAX_NAME_LEN];
     char stu_number[MAX_ID_LEN];
-}num_n_stu;
+}STUDENT;
 
 int main(void)
 {
     LIST_HEAD head;
-    num_n_stu stu_1;
-    num_n_stu stu_2;
-    num_n_stu *entry;
 
-    LIST_HEAD *p;
+    STUDENT *entry;
+    int  i = 0 ;
+
+    LIST_HEAD *pLTmp;
     INIT_LIST_HEAD(&head);
-    strcpy(stu_1.name,"lisi");
-    strcpy(stu_1.stu_number,"10000000");
-
-    strcpy(stu_2.name,"zhangsan");
-    strcpy(stu_2.stu_number,"10000001");
-    list_add(&stu_1.list,&head);
-    list_add(&stu_2.list,&head);
-    //list_del(&stu_2.list);
-    list_for_each(p,&head)
+    
+    STUDENT *pstStudent =(STUDENT *)malloc( MAX_STU * sizeof(STUDENT));
+    if(NULL == pstStudent )
     {
-        entry=list_entry(p,struct stud,list);
+        assert(0);
+        return -1;
+    }    
+
+    for (i = 0 ; i<5 ; i++ )
+    {
+        sprintf(pstStudent[i].name ,"name%d",i);
+        sprintf(pstStudent[i].stu_number ,"%d0000",i);
+        list_add_tail(&pstStudent[i].list,&head);
+    }
+    
+    //list_del(&stu_2.list);
+    list_for_each(pLTmp,&head)
+    {
+        entry=list_entry(pLTmp,struct stud,list);
         printf("name: %s\n",entry->name);
         printf("stu_number: %s\n",entry->stu_number);
     }
-    list_del(&stu_1.list);
+    
+    list_del(&pstStudent[0].list);
+    printf("after delete first \r\n");
+
+    list_for_each(pLTmp,&head)
+    {
+        entry=list_entry(pLTmp,struct stud,list);
+        printf("name: %s\n",entry->name);
+        printf("stu_number: %s\n",entry->stu_number);
+    }
+    free(pstStudent);
     return 0;
 }
