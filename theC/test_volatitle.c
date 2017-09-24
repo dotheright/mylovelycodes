@@ -3,7 +3,7 @@
 int  main()
 {
 	int i = 5;
-	int j = 6;
+	volatile int j = 6;
 	int p = 0;
 	int q = 0;
 
