@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>AMBARI_USER</name>
+        <value>admin</value>
+        <description>Ambari Server user name</description>
+    </property>
+    <property>
+        <name>AMBARI_USER_PASSWORD</name>
+        <value></value>
+        <description>Ambari Server user password</description>
+        <property-type>PASSWORD</property-type>
+    </property>
+    <property>
+        <name>AMBARI_CLUSTER_NAME</name>
+        <value></value>
+        <description>Ambari Cluster name</description>
+    </property>
+    <property>
+        <name>AMBARI_SERVER_HOST</name>
+        <value></value>
+        <description>Ambari Server host name. Symphony will communicate with this host for integration</description>
+    </property>
+    <property>
+        <name>AMBARI_WEB_LISTEN_PORT</name>
+        <value>8080</value>
+        <description>Ambari WEB Server listen port. Symphony uses this port for communication with Ambari</description>
+    </property>
+</configuration>
