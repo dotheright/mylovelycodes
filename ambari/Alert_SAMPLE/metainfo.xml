@@ -14,7 +14,7 @@
  <component>
  <name>MyKubernetes</name>
  <displayName>My Kubernetes</displayName>
- <category>Kubernetes</category>
+ <category>MASTER</category>
  <cardinality>1</cardinality>
  <timelineAppid>k8s_test</timelineAppid>
  <commandScript>
@@ -29,6 +29,13 @@
  <osFamily>any</osFamily> 
  </osSpecific>
  </osSpecifics>
+
+ <themes>
+      <theme>
+        <fileName>themes/theme.json</fileName>
+        <default>true</default>
+      </theme>
+ </themes>
  </service>
  </services>
 </metainfo>

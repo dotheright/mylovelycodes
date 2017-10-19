@@ -1,8 +1,10 @@
 
-import sys, os 
+import sys
+import os 
 import json 
 import logging
 import platform from resource_management 
+import Script   from resource_management
 import * from resource_management.core.exceptions 
 import ComponentIsNotRunning from resource_management.core.environment 
 import Environment from resource_management.core.logger 
@@ -33,5 +35,6 @@ class Master(Script):
 	 	result = os.system(cmd) 
 	 	if result != 0: 
 	 		raise ComponentIsNotRunning()
+	 
 if __name__ == "__main__": 
 	Master().execute()

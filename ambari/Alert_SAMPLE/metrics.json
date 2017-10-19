@@ -1,27 +1,32 @@
 {
-    "ALERT_TEST": {
+    "MyKubernetes": {
         "Component": [
             {
                 "type": "ganglia",
                 "metrics": {
                     "default": {
-                        "metrics/test1": {
-                            "metric": "test1",
+                        "metrics/mtest": {
+                            "metric": "mtest",
                             "pointInTime": true,
                             "temporal": true
                         },
-                        "metrics/test2": {
-                            "metric": "test2",
+                        "metrics/mtest1": {
+                            "metric": "mtest1",
                             "pointInTime": true,
                             "temporal": true
                         },
-                        "metrics/test3": {
-                            "metric": "test3",
+                        "metrics/mtest2": {
+                            "metric": "mtest2",
                             "pointInTime": true,
                             "temporal": true
                         },
-                        "metrics/test4": {
-                            "metric": "test4",
+                        "metrics/mtest3": {
+                            "metric": "mtest3",
+                            "pointInTime": true,
+                            "temporal": true
+                        },
+                        "metrics/mtest4": {
+                            "metric": "mtest4",
                             "pointInTime": true,
                             "temporal": true
                         }
