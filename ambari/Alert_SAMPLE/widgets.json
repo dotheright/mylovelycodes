@@ -8,27 +8,115 @@
                 {
                     "widget_name": "test_Kubernetes",
                     "description": "test MyKubernetes",
-                    "widget_type": "GRAPH",
+                    "widget_type": "GAUGE",
                     "is_visible": true,
                     "metrics": [
                         {
-                            "name": "test1",
-                            "metric_path": "metrics/test1",
+                            "name": "mtest",
+                            "metric_path": "metrics/mtest",
                             "service_name": "ALERT_TEST",
                             "component_name": "MyKubernetes"
                         }
                     ],
                     "values": [
                         {
-                            "name": "test1",
-                            "value": "${test1}"
+                            "name": "mtest",
+                            "value": "0.15"
                         }
                     ],
                     "properties": {
-                        "graph_type": "per",
-                        "time_range": "1"
+                        "dispay_unit": "%",
+                        "warning_threshold": "0.75",
+                        "error_threshold": "0.9"
                     }
+                },
+                
+                {
+               "widget_name": "HEATMAP Test",
+               "default_section_name": "HEATMAPS",
+               "description": "my heatmap",
+               "widget_type": "HEATMAP",
+               "is_visible": true,
+               "metrics": [
+                 {
+                   "name": "new heatmap",
+                   "metric_path": "metrics/mtest2",
+                   "service_name": "ALERT_TEST",
+                   "component_name": "MyKubernetes"
+                 }
+               ],
+               "values": [
+                 {
+                   "name": "heatmap Read",
+                   "value": "512"
+                 }
+               ],
+               "properties": {
+                 "display_unit": "Kbps",
+                 "max_limit": "1024"
+               }
+               },
+
+                {
+               "widget_name": "GRAPH test",
+               "description": "GRAPH test description",
+               "widget_type": "GRAPH",
+               "is_visible": true,
+               "metrics": [
+                 {
+                   "name": "mtest1",
+                   "metric_path": "metrics/mtest1",
+                   "service_name": "ALERT_TEST",
+                   "component_name": "MyKubernetes"                   
+                 },
+                 {
+                   "name": "mtest3",
+                   "metric_path": "metrics/mtest3",
+                   "service_name": "ALERT_TEST",
+                   "component_name": "MyKubernetes"
+                 }
+               ],
+               "values": [
+                 {
+                   "name": "Wait time",
+                   "value": "10"
+                 },
+                 {
+                   "name": "Processing time",
+                   "value": "20"
+                 }
+               ],
+               "properties": {
+                 "graph_type": "LINE",
+                 "time_range": "1",
+                 "display_unit": "ms"
+               }
+             },
+
+                {
+              "widget_name": "number Test",
+              "description": "Number represents data.",
+              "widget_type": "NUMBER",
+              "is_visible": true,
+              "metrics": [
+                {
+                  "name": "number Test",
+                  "metric_path": "metrics/test4",
+                  "service_name": "ALERT_TEST",
+                  "component_name": "MyKubernetes"
                 }
+              ],
+              "values": [
+                {
+                  "name": "Number represents data.",
+                  "value": "30"
+                }
+              ],
+              "properties": {
+                "warning_threshold": "20",
+                "error_threshold": "50"
+              }
+              }
             ]
         }
     ]

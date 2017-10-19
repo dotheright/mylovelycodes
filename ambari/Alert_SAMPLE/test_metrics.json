@@ -1,0 +1,14 @@
+json="{
+"metrics\": [
+ {
+    "metricname":"test1",
+    "appid":"k8s_test",
+    "hostname":"master",
+    "timestamp": 100,
+    "starttime": 100,
+    "metrics": {
+    "${millon_time}": 300
+     }
+ }
+ ]
+}"

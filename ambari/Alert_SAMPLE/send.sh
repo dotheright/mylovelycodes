@@ -9,7 +9,7 @@ json="{
  {
  \"metricname\": \"$2\",
  \"appid\": \"$3\",
- \"hostname\": \"slave\",
+ \"hostname\": \"$1\",
  \"timestamp\": ${millon_time},
  \"starttime\": ${millon_time},
  \"metrics\": {
@@ -26,6 +26,7 @@ done
 # ./send.sh slave test1 sample
 # cd /var/lib/ambari-server/resources/stacks/HDP/2.3/services/SAMPLE
 
+curl -i -X POST -H "Content-Type: application/json" -d @test_metrics.json  http://master:6188/ws/v1/timeline/metrics
 
 #!/bin/env python
 

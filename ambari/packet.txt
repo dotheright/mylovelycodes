@@ -1,0 +1,1579 @@
+POST /api/v1/clusters/mycluster/hosts?fields=Hosts/rack_info,Hosts/host_name,Hosts/maintenance_state,Hosts/public_host_name,Hosts/cpu_count,Hosts/ph_cpu_count,Hosts/last_agent_env,alerts_summary,Hosts/host_status,Hosts/last_heartbeat_time,Hosts/ip,host_components/HostRoles/state,host_components/HostRoles/maintenance_state,host_components/HostRoles/stale_configs,host_components/HostRoles/service_name,host_components/HostRoles/display_name,host_components/HostRoles/desired_admin_state,metrics/disk,metrics/load/load_one,Hosts/total_mem,Hosts/os_arch,Hosts/os_type,metrics/cpu/cpu_system,metrics/cpu/cpu_user,metrics/memory/mem_total,metrics/memory/mem_free,stack_versions/HostStackVersions,stack_versions/repository_versions/RepositoryVersions/repository_version,stack_versions/repository_versions/RepositoryVersions/id,stack_versions/repository_versions/RepositoryVersions/display_name&minimal_response=true,host_components/logging&sortBy=Hosts/host_name.asc&_=1508216653040 HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+X-Http-Method-Override: GET
+Content-type: application/x-www-form-urlencoded
+Content-Length: 54
+Cookie: AMBARISESSIONID=gk9nikcousx41fxr7ln03v5ch
+Connection: keep-alive
+
+{"RequestInfo":{"query":"Hosts/host_name.in(master)"}}HTTP/1.1 200 OK
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Cache-Control: no-store
+Pragma: no-cache
+User: admin
+Content-Type: text/plain
+Content-Encoding: gzip
+Vary: Accept-Encoding, User-Agent
+Content-Length: 9436
+
+{
+  "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts?fields=Hosts/rack_info,Hosts/host_name,Hosts/maintenance_state,Hosts/public_host_name,Hosts/cpu_count,Hosts/ph_cpu_count,Hosts/last_agent_env,alerts_summary,Hosts/host_status,Hosts/last_heartbeat_time,Hosts/ip,host_components/HostRoles/state,host_components/HostRoles/maintenance_state,host_components/HostRoles/stale_configs,host_components/HostRoles/service_name,host_components/HostRoles/display_name,host_components/HostRoles/desired_admin_state,metrics/disk,metrics/load/load_one,Hosts/total_mem,Hosts/os_arch,Hosts/os_type,metrics/cpu/cpu_system,metrics/cpu/cpu_user,metrics/memory/mem_total,metrics/memory/mem_free,stack_versions/HostStackVersions,stack_versions/repository_versions/RepositoryVersions/repository_version,stack_versions/repository_versions/RepositoryVersions/id,stack_versions/repository_versions/RepositoryVersions/display_name&minimal_response=true,host_components/logging&sortBy=Hosts/host_name.asc&_=1508216653040",
+  "items" : [
+    {
+      "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master",
+      "Hosts" : {
+        "cluster_name" : "mycluster",
+        "cpu_count" : 4,
+        "host_name" : "master",
+        "host_status" : "HEALTHY",
+        "ip" : "127.0.1.1",
+        "last_agent_env" : {
+          "stackFoldersAndFiles" : [ ],
+          "alternatives" : [ ],
+          "existingUsers" : [ ],
+          "existingRepos" : [ ],
+          "installedPackages" : [ ],
+          "hostHealth" : {
+            "activeJavaProcs" : [
+              {
+                "user" : "tomcat8",
+                "pid" : 1248,
+                "command" : "/usr/lib/jvm/default-java/bin/java -Djava.util.logging.config.file=/var/lib/tomcat8/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC -Djava.endorsed.dirs=/usr/share/tomcat8/endorsed -classpath /usr/share/tomcat8/bin/bootstrap.jar:/usr/share/tomcat8/bin/tomcat-juli.jar -Dcatalina.base=/var/lib/tomcat8 -Dcatalina.home=/usr/share/tomcat8 -Djava.io.tmpdir=/tmp/tomcat8-tomcat8-tmp org.apache.catalina.startup.Bootstrap start",
+                "hadoop" : false
+              },
+              {
+                "user" : "root",
+                "pid" : 2463,
+                "command" : "/usr/java/jdk1.8.0_144/bin/java -server -XX:NewRatio=3 -XX:+UseConcMarkSweepGC -XX:-UseGCOverheadLimit -XX:CMSInitiatingOccupancyFraction=60 -Djava.io.tmpdir=/var/lib/smartsense/hst-server/tmp -Dlog.file.name=hst-server.log -Xms1024m -Xmx2048m -cp /etc/hst/conf:/usr/hdp/share/hst/hst-common/lib/* com.hortonworks.support.tools.server.SupportToolServer",
+                "hadoop" : false
+              },
+              {
+                "user" : "zookeeper",
+                "pid" : 15365,
+                "command" : "/usr/java/jdk1.8.0_144/bin/java -Dzookeeper.log.dir=/var/log/zookeeper -Dzookeeper.log.file=zookeeper-zookeeper-server-master.log -Dzookeeper.root.logger=INFO,ROLLINGFILE -cp /usr/hdp/current/zookeeper-server/bin/../build/classes:/usr/hdp/current/zookeeper-server/bin/../build/lib/*.jar:/usr/hdp/current/zookeeper-server/bin/../lib/xercesMinimal-1.9.6.2.jar:/usr/hdp/current/zookeeper-server/bin/../lib/wagon-provider-api-2.4.jar:/usr/hdp/current/zookeeper-server/bin/../lib/wagon-http-shared4-2.4.jar:/usr/hdp/current/zookeeper-server/bin/../lib/wagon-http-shared-1.0-beta-6.jar:/usr/hdp/current/zookeeper-server/bin/../lib/wagon-http-lightweight-1.0-beta-6.jar:/usr/hdp/current/zookeeper-server/bin/../lib/wagon-http-2.4.jar:/usr/hdp/current/zookeeper-server/bin/../lib/wagon-file-1.0-beta-6.jar:/usr/hdp/current/zookeeper-server/bin/../lib/slf4j-log4j12-1.6.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/slf4j-api-1.6.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/plexus-utils-3.0.8.jar:/usr/hdp/current/zookeeper-server/bin/../lib/plexus-interpolation-1.11.jar:/usr/hdp/current/zookeeper-server/bin/../lib/plexus-container-default-1.0-alpha-9-stable-1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/netty-3.7.0.Final.jar:/usr/hdp/current/zookeeper-server/bin/../lib/nekohtml-1.9.6.2.jar:/usr/hdp/current/zookeeper-server/bin/../lib/maven-settings-2.2.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/maven-repository-metadata-2.2.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/maven-project-2.2.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/maven-profile-2.2.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/maven-plugin-registry-2.2.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/maven-model-2.2.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/maven-error-diagnostics-2.2.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/maven-artifact-manager-2.2.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/maven-artifact-2.2.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/maven-ant-tasks-2.1.3.jar:/usr/hdp/current/zookeeper-server/bin/../lib/log4j-1.2.16.jar:/usr/hdp/current/zookeeper-server/bin/../lib/jsoup-1.7.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/jline-0.9.94.jar:/usr/hdp/current/zookeeper-server/bin/../lib/commons-logging-1.1.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/commons-io-2.2.jar:/usr/hdp/current/zookeeper-server/bin/../lib/commons-codec-1.6.jar:/usr/hdp/current/zookeeper-server/bin/../lib/classworlds-1.1-alpha-2.jar:/usr/hdp/current/zookeeper-server/bin/../lib/backport-util-concurrent-3.1.jar:/usr/hdp/current/zookeeper-server/bin/../lib/ant-launcher-1.8.0.jar:/usr/hdp/current/zookeeper-server/bin/../lib/ant-1.8.0.jar:/usr/hdp/current/zookeeper-server/bin/../zookeeper-3.4.6.2.6.2.0-205.jar:/usr/hdp/current/zookeeper-server/bin/../src/java/lib/*.jar:/usr/hdp/current/zookeeper-server/conf:.:/usr/java/jdk1.8.0_144/lib/dt.jar:/usr/java/jdk1.8.0_144/lib/tools.jar :/usr/share/zookeeper/*:/usr/share/zookeeper/* -Xmx1024m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.local.only=false org.apache.zookeeper.server.quorum.QuorumPeerMain /usr/hdp/current/zookeeper-server/conf/zoo.cfg",
+                "hadoop" : true
+              },
+              {
+                "user" : "infra-solr",
+                "pid" : 15555,
+                "command" : "/usr/java/jdk1.8.0_144/bin/java -server -Xms1024m -Xmx2048m -XX:NewRatio=3 -XX:SurvivorRatio=4 -XX:TargetSurvivorRatio=90 -XX:MaxTenuringThreshold=8 -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:ConcGCThreads=4 -XX:ParallelGCThreads=4 -XX:+CMSScavengeBeforeRemark -XX:PretenureSizeThreshold=64m -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=50 -XX:CMSMaxAbortablePrecleanTime=6000 -XX:+CMSParallelRemarkEnabled -XX:+ParallelRefProcEnabled -verbose:gc -XX:+PrintHeapAtGC -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime -Xloggc:/var/log/ambari-infra-solr/solr_gc.log -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=18886 -Dcom.sun.management.jmxremote.rmi.port=18886 -DzkClientTimeout=60000 -DzkHost=master:2181/infra-solr -Djetty.port=8886 -DSTOP.PORT=7886 -DSTOP.KEY=solrrocks -Duser.timezone=UTC -Djetty.home=/usr/lib/ambari-infra-solr/server -Dsolr.solr.home=/opt/ambari_infra_solr/data -Dsolr.install.dir=/usr/lib/ambari-infra-solr -Dlog4j.configuration=file:/etc/ambari-infra-solr/conf/log4j.properties -Dsolr.kerberos.name.rules= -XX:OnOutOfMemoryError=/usr/lib/ambari-infra-solr/bin/oom_solr.sh 8886 /var/log/ambari-infra-solr -jar start.jar --module=http",
+                "hadoop" : false
+              },
+              {
+                "user" : "ams",
+                "pid" : 16775,
+                "command" : "/usr/java/jdk1.8.0_144/bin/java -Dproc_master -XX:OnOutOfMemoryError=kill -9 %p -XX:+UseConcMarkSweepGC -XX:ErrorFile=/var/log/ambari-metrics-collector/hs_err_pid%p.log -Djava.io.tmpdir=/var/lib/ambari-metrics-collector/hbase-tmp -Djava.library.path=/usr/lib/ams-hbase/lib/hadoop-native/ -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:/var/log/ambari-metrics-collector/gc.log-201710171226 -Xms1408m -Xmx1408m -Xmn192m -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCMSInitiatingOccupancyOnly -Dhbase.log.dir=/var/log/ambari-metrics-collector -Dhbase.log.file=hbase-ams-master-master.log -Dhbase.home.dir=/usr/lib/ams-hbase/ -Dhbase.id.str=ams -Dhbase.root.logger=INFO,RFA -Dhbase.security.logger=INFO,RFAS org.apache.hadoop.hbase.master.HMaster start",
+                "hadoop" : true
+              },
+              {
+                "user" : "ams",
+                "pid" : 16821,
+                "command" : "/usr/java/jdk1.8.0_144/bin/java -Xms512m -Xmx512m -Djava.library.path=/usr/lib/ams-hbase/lib/hadoop-native -XX:+UseConcMarkSweepGC -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:/var/log/ambari-metrics-collector/collector-gc.log-201710171226 -cp /usr/lib/ambari-metrics-collector/*:/etc/ambari-metrics-collector/conf: -Djava.net.preferIPv4Stack=true -Dams.log.dir=/var/log/ambari-metrics-collector -Dproc_timelineserver org.apache.hadoop.yarn.server.applicationhistoryservice.ApplicationHistoryServer",
+                "hadoop" : true
+              },
+              {
+                "user" : "root",
+                "pid" : 18195,
+                "command" : "/usr/java/jdk1.8.0_144/bin/java -DSmartSenseActivityAnalyzer -Djava.util.Arrays.useLegacyMergeSort=true -Djava.library.path=/usr/hdp/current/hadoop-client/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64 -DconfDir=/etc/smartsense-activity/conf/ -Dlog.file.name=activity-analyzer.log -Dlog4j.configuration=log4j.properties -cp /etc/smartsense-activity/conf/:/etc/ams-hbase/conf:/etc/hadoop/conf/:/etc/tez/conf/:::./lib/annotations-1.3.2.jar:./lib/antlr-2.7.7.jar:./lib/antlr-runtime-3.5.jar:./lib/aopalliance-1.0.jar:./lib/asm-all-5.0.2.jar:./lib/commons-beanutils-1.9.2.jar:./lib/commons-cli-1.3.1.jar:./lib/commons-codec-1.9.jar:./lib/commons-collections-3.2.2.jar:./lib/commons-collections4-4.1.jar:./lib/commons-configuration-1.10.jar:./lib/commons-csv-1.0.jar:./lib/commons-el-1.0.jar:./lib/commons-io-2.4.jar:./lib/commons-jexl-2.1.1.jar:./lib/commons-lang-2.6.jar:./lib/commons-lang3-3.3.2.jar:./lib/commons-logging-1.1.jar:./lib/commons-math-2.2.jar:./lib/commons-math3-3.6.1.jar:./lib/commons-pool2-2.4.2.jar:./lib/curator-client-2.9.1.jar:./lib/curator-framework-2.9.1.jar:./lib/curator-recipes-2.9.1.jar:./lib/disruptor-3.3.0.jar:./lib/fastutil-6.5.6.jar:./lib/findbugs-annotations-1.3.9-1.jar:./lib/gson-2.2.2.jar:./lib/guava-14.0.1.jar:./lib/guice-3.0.jar:./lib/guice-assistedinject-3.0.jar:./lib/hadoop-distcp-2.7.3.2.5.3.0-37.jar:./lib/hamcrest-core-1.3.jar:./lib/hbase-annotations-1.1.2.2.5.3.0-37.jar:./lib/hbase-client-1.1.2.2.5.3.0-37.jar:./lib/hbase-common-1.1.2.2.5.3.0-37.jar:./lib/hbase-common-1.1.2.2.5.3.0-37-tests.jar:./lib/hbase-hadoop2-compat-1.1.2.2.5.3.0-37.jar:./lib/hbase-hadoop-compat-1.1.2.2.5.3.0-37.jar:./lib/hbase-prefix-tree-1.1.2.2.5.3.0-37.jar:./lib/hbase-procedure-1.1.2.2.5.3.0-37.jar:./lib/hbase-protocol-1.1.2.2.5.3.0-37.jar:./lib/hbase-server-1.1.2.2.5.3.0-37.jar:./lib/htrace-core-3.1.0-incubating.jar:./lib/httpclient-4.5.jar:./lib/httpcore-4.4.1.jar:./lib/jackson-core-asl-1.9.2.jar:./lib/jackson-jaxrs-1.9.2.jar:./lib/jackson-mapper-asl-1.9.2.jar:./lib/jackson-xc-1.9.2.jar:./lib/jamon-runtime-2.4.1.jar:./lib/jasper-compiler-5.5.23.jar:./lib/jasper-runtime-5.5.23.jar:./lib/javax.inject-1.jar:./lib/jcodings-1.0.8.jar:./lib/jdk.tools-1.7.jar:./lib/jersey-core-1.19.3.jar:./lib/jersey-server-1.19.3.jar:./lib/jettison-1.3.7.jar:./lib/jetty-6.1.26.hwx.jar:./lib/jetty-sslengine-6.1.26.hwx.jar:./lib/jetty-util-6.1.26.hwx.jar:./lib/jline-2.11.jar:./lib/joda-time-2.3.jar:./lib/joni-2.1.2.jar:./lib/jooq-3.6.4.jar:./lib/jsp-2.1-6.1.14.jar:./lib/jsp-api-2.1-6.1.14.jar:./lib/jsr305-1.3.9.jar:./lib/jsr311-api-1.1.1.jar:./lib/junit-4.11.jar:./lib/libthrift-0.9.0.jar:./lib/log4j-1.2.17.jar:./lib/metrics-core-2.2.0.jar:./lib/metrics-core-3.1.0.jar:./lib/netty-3.6.2.Final.jar:./lib/netty-all-4.0.23.Final.jar:./lib/phoenix-core-4.7.0.2.5.3.0-37.jar:./lib/protobuf-java-2.5.0.jar:./lib/servlet-api-2.5-6.1.14.jar:./lib/slf4j-api-1.7.5.jar:./lib/slf4j-log4j12-1.7.5.jar:./lib/smartsense-activity-analyzer-1.4.2.2.5.2.0-298.jar:./lib/snappy-0.3.jar:./lib/sqlline-1.1.8.jar:./lib/stax-api-1.0.1.jar:./lib/stringtemplate-3.2.1.jar:./lib/tephra-api-0.7.0.jar:./lib/tephra-core-0.7.0.jar:./lib/tephra-hbase-compat-1.1-0.7.0.jar:./lib/tez-history-parser-0.7.0.2.5.3.0-37.jar:./lib/tez-job-analyzer-0.7.0.2.5.3.0-37.jar:./lib/twill-api-0.6.0-incubating.jar:./lib/twill-common-0.6.0-incubating.jar:./lib/twill-core-0.6.0-incubating.jar:./lib/twill-discovery-api-0.6.0-incubating.jar:./lib/twill-discovery-core-0.6.0-incubating.jar:./lib/twill-zookeeper-0.6.0-incubating.jar:./lib/xercesImpl-2.9.1.jar:./lib/xml-apis-1.4.01.jar:./lib/zookeeper-3.4.6.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/annotations-1.3.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/antlr-2.7.7.jar:/usr/hdp/share/hst/activity-analyzer/lib/antlr-runtime-3.5.jar:/usr/hdp/share/hst/activity-analyzer/lib/aopalliance-1.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/asm-all-5.0.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-beanutils-1.9.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-cli-1.3.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-codec-1.9.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-collections-3.2.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-collections4-4.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-configuration-1.10.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-csv-1.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-el-1.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-io-2.4.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-jexl-2.1.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-lang-2.6.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-lang3-3.3.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-logging-1.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-math-2.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-math3-3.6.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/commons-pool2-2.4.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/curator-client-2.9.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/curator-framework-2.9.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/curator-recipes-2.9.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/disruptor-3.3.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/fastutil-6.5.6.jar:/usr/hdp/share/hst/activity-analyzer/lib/findbugs-annotations-1.3.9-1.jar:/usr/hdp/share/hst/activity-analyzer/lib/gson-2.2.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/guava-14.0.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/guice-3.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/guice-assistedinject-3.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/hadoop-distcp-2.7.3.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/hamcrest-core-1.3.jar:/usr/hdp/share/hst/activity-analyzer/lib/hbase-annotations-1.1.2.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/hbase-client-1.1.2.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/hbase-common-1.1.2.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/hbase-common-1.1.2.2.5.3.0-37-tests.jar:/usr/hdp/share/hst/activity-analyzer/lib/hbase-hadoop2-compat-1.1.2.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/hbase-hadoop-compat-1.1.2.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/hbase-prefix-tree-1.1.2.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/hbase-procedure-1.1.2.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/hbase-protocol-1.1.2.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/hbase-server-1.1.2.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/htrace-core-3.1.0-incubating.jar:/usr/hdp/share/hst/activity-analyzer/lib/httpclient-4.5.jar:/usr/hdp/share/hst/activity-analyzer/lib/httpcore-4.4.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/jackson-core-asl-1.9.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/jackson-jaxrs-1.9.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/jackson-mapper-asl-1.9.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/jackson-xc-1.9.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/jamon-runtime-2.4.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/jasper-compiler-5.5.23.jar:/usr/hdp/share/hst/activity-analyzer/lib/jasper-runtime-5.5.23.jar:/usr/hdp/share/hst/activity-analyzer/lib/javax.inject-1.jar:/usr/hdp/share/hst/activity-analyzer/lib/jcodings-1.0.8.jar:/usr/hdp/share/hst/activity-analyzer/lib/jdk.tools-1.7.jar:/usr/hdp/share/hst/activity-analyzer/lib/jersey-core-1.19.3.jar:/usr/hdp/share/hst/activity-analyzer/lib/jersey-server-1.19.3.jar:/usr/hdp/share/hst/activity-analyzer/lib/jettison-1.3.7.jar:/usr/hdp/share/hst/activity-analyzer/lib/jetty-6.1.26.hwx.jar:/usr/hdp/share/hst/activity-analyzer/lib/jetty-sslengine-6.1.26.hwx.jar:/usr/hdp/share/hst/activity-analyzer/lib/jetty-util-6.1.26.hwx.jar:/usr/hdp/share/hst/activity-analyzer/lib/jline-2.11.jar:/usr/hdp/share/hst/activity-analyzer/lib/joda-time-2.3.jar:/usr/hdp/share/hst/activity-analyzer/lib/joni-2.1.2.jar:/usr/hdp/share/hst/activity-analyzer/lib/jooq-3.6.4.jar:/usr/hdp/share/hst/activity-analyzer/lib/jsp-2.1-6.1.14.jar:/usr/hdp/share/hst/activity-analyzer/lib/jsp-api-2.1-6.1.14.jar:/usr/hdp/share/hst/activity-analyzer/lib/jsr305-1.3.9.jar:/usr/hdp/share/hst/activity-analyzer/lib/jsr311-api-1.1.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/junit-4.11.jar:/usr/hdp/share/hst/activity-analyzer/lib/libthrift-0.9.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/log4j-1.2.17.jar:/usr/hdp/share/hst/activity-analyzer/lib/metrics-core-2.2.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/metrics-core-3.1.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/netty-3.6.2.Final.jar:/usr/hdp/share/hst/activity-analyzer/lib/netty-all-4.0.23.Final.jar:/usr/hdp/share/hst/activity-analyzer/lib/phoenix-core-4.7.0.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/protobuf-java-2.5.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/servlet-api-2.5-6.1.14.jar:/usr/hdp/share/hst/activity-analyzer/lib/slf4j-api-1.7.5.jar:/usr/hdp/share/hst/activity-analyzer/lib/slf4j-log4j12-1.7.5.jar:/usr/hdp/share/hst/activity-analyzer/lib/smartsense-activity-analyzer-1.4.2.2.5.2.0-298.jar:/usr/hdp/share/hst/activity-analyzer/lib/snappy-0.3.jar:/usr/hdp/share/hst/activity-analyzer/lib/sqlline-1.1.8.jar:/usr/hdp/share/hst/activity-analyzer/lib/stax-api-1.0.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/stringtemplate-3.2.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/tephra-api-0.7.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/tephra-core-0.7.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/tephra-hbase-compat-1.1-0.7.0.jar:/usr/hdp/share/hst/activity-analyzer/lib/tez-history-parser-0.7.0.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/tez-job-analyzer-0.7.0.2.5.3.0-37.jar:/usr/hdp/share/hst/activity-analyzer/lib/twill-api-0.6.0-incubating.jar:/usr/hdp/share/hst/activity-analyzer/lib/twill-common-0.6.0-incubating.jar:/usr/hdp/share/hst/activity-analyzer/lib/twill-core-0.6.0-incubating.jar:/usr/hdp/share/hst/activity-analyzer/lib/twill-discovery-api-0.6.0-incubating.jar:/usr/hdp/share/hst/activity-analyzer/lib/twill-discovery-core-0.6.0-incubating.jar:/usr/hdp/share/hst/activity-analyzer/lib/twill-zookeeper-0.6.0-incubating.jar:/usr/hdp/share/hst/activity-analyzer/lib/xercesImpl-2.9.1.jar:/usr/hdp/share/hst/activity-analyzer/lib/xml-apis-1.4.01.jar:/usr/hdp/share/hst/activity-analyzer/lib/zookeeper-3.4.6.2.5.3.0-37.jar:/usr/lib/ambari-metrics-collector/activation-1.1.jar:/usr/lib/ambari-metrics-collector/ambari-metrics-common-2.5.2.0.298.jar:/usr/lib/ambari-metrics-collector/ambari-metrics-timelineservice-2.5.2.0.298.jar:/usr/lib/ambari-metrics-collector/annotations-1.3.2.jar:/usr/lib/ambari-metrics-collector/antlr-2.7.7.jar:/usr/lib/ambari-metrics-collector/antlr-runtime-3.5.jar:/usr/lib/ambari-metrics-collector/aopalliance-1.0.jar:/usr/lib/ambari-metrics-collector/apacheds-i18n-2.0.0-M15.jar:/usr/lib/ambari-metrics-collector/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/lib/ambari-metrics-collector/api-asn1-api-1.0.0-M20.jar:/usr/lib/ambari-metrics-collector/api-util-1.0.0-M20.jar:/usr/lib/ambari-metrics-collector/asm-3.1.jar:/usr/lib/ambari-metrics-collector/asm-all-5.0.2.jar:/usr/lib/ambari-metrics-collector/avro-1.7.4.jar:/usr/lib/ambari-metrics-collector/aws-java-sdk-core-1.10.6.jar:/usr/lib/ambari-metrics-collector/aws-java-sdk-kms-1.10.6.jar:/usr/lib/ambari-metrics-collector/aws-java-sdk-s3-1.10.6.jar:/usr/lib/ambari-metrics-collector/azure-keyvault-core-0.8.0.jar:/usr/lib/ambari-metrics-collector/azure-storage-5.3.0.jar:/usr/lib/ambari-metrics-collector/commons-beanutils-1.9.2.jar:/usr/lib/ambari-metrics-collector/commons-beanutils-core-1.8.0.jar:/usr/lib/ambari-metrics-collector/commons-cli-1.2.jar:/usr/lib/ambari-metrics-collector/commons-codec-1.6.jar:/usr/lib/ambari-metrics-collector/commons-collections-3.2.1.jar:/usr/lib/ambari-metrics-collector/commons-compress-1.4.1.jar:/usr/lib/ambari-metrics-collector/commons-configuration-1.6.jar:/usr/lib/ambari-metrics-collector/commons-csv-1.0.jar:/usr/lib/ambari-metrics-collector/commons-daemon-1.0.13.jar:/usr/lib/ambari-metrics-collector/commons-digester-1.8.jar:/usr/lib/ambari-metrics-collector/commons-io-2.4.jar:/usr/lib/ambari-metrics-collector/commons-lang-2.5.jar:/usr/lib/ambari-metrics-collector/commons-lang3-3.3.2.jar:/usr/lib/ambari-metrics-collector/commons-logging-1.1.1.jar:/usr/lib/ambari-metrics-collector/commons-math-2.1.jar:/usr/lib/ambari-metrics-collector/commons-math3-3.4.1.jar:/usr/lib/ambari-metrics-collector/commons-net-3.1.jar:/usr/lib/ambari-metrics-collector/commons-pool2-2.3.jar:/usr/lib/ambari-metrics-collector/curator-client-2.7.1.jar:/usr/lib/ambari-metrics-collector/curator-framework-2.7.1.jar:/usr/lib/ambari-metrics-collector/curator-recipes-2.7.1.jar:/usr/lib/ambari-metrics-collector/disruptor-3.3.0.jar:/usr/lib/ambari-metrics-collector/fastutil-6.5.6.jar:/usr/lib/ambari-metrics-collector/findbugs-annotations-1.3.9-1.jar:/usr/lib/ambari-metrics-collector/gson-2.2.2.jar:/usr/lib/ambari-metrics-collector/guava-14.0.1.jar:/usr/lib/ambari-metrics-collector/guice-3.0.jar:/usr/lib/ambari-metrics-collector/guice-assistedinject-3.0.jar:/usr/lib/ambari-metrics-collector/guice-servlet-3.0.jar:/usr/lib/ambari-metrics-collector/hadoop-annotations-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-auth-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-aws-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-azure-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-client-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-common-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-distcp-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-hdfs-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-mapreduce-client-app-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-mapreduce-client-common-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-mapreduce-client-core-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-mapreduce-client-jobclient-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-mapreduce-client-shuffle-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-yarn-api-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-yarn-client-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-yarn-common-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-yarn-registry-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-yarn-server-common-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hadoop-yarn-server-nodemanager-2.7.3.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hbase-annotations-1.1.2.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hbase-client-1.1.2.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hbase-common-1.1.2.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hbase-hadoop2-compat-1.1.2.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hbase-hadoop-compat-1.1.2.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hbase-procedure-1.1.2.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hbase-protocol-1.1.2.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/hbase-server-1.1.2.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/helix-core-0.6.6.jar:/usr/lib/ambari-metrics-collector/htrace-core-3.1.0-incubating.jar:/usr/lib/ambari-metrics-collector/httpclient-4.5.2.jar:/usr/lib/ambari-metrics-collector/httpcore-4.4.4.jar:/usr/lib/ambari-metrics-collector/jackson-annotations-2.2.3.jar:/usr/lib/ambari-metrics-collector/jackson-core-2.2.3.jar:/usr/lib/ambari-metrics-collector/jackson-core-asl-1.9.9.jar:/usr/lib/ambari-metrics-collector/jackson-databind-2.2.3.jar:/usr/lib/ambari-metrics-collector/jackson-jaxrs-1.9.2.jar:/usr/lib/ambari-metrics-collector/jackson-mapper-asl-1.9.13.jar:/usr/lib/ambari-metrics-collector/jackson-xc-1.9.2.jar:/usr/lib/ambari-metrics-collector/jamon-runtime-2.4.1.jar:/usr/lib/ambari-metrics-collector/javax.inject-1.jar:/usr/lib/ambari-metrics-collector/java-xmlbuilder-0.4.jar:/usr/lib/ambari-metrics-collector/jaxb-api-2.2.2.jar:/usr/lib/ambari-metrics-collector/jaxb-impl-2.2.3-1.jar:/usr/lib/ambari-metrics-collector/jcip-annotations-1.0.jar:/usr/lib/ambari-metrics-collector/jcodings-1.0.8.jar:/usr/lib/ambari-metrics-collector/jdk.tools-1.7.jar:/usr/lib/ambari-metrics-collector/jersey-client-1.11.jar:/usr/lib/ambari-metrics-collector/jersey-core-1.11.jar:/usr/lib/ambari-metrics-collector/jersey-guice-1.11.jar:/usr/lib/ambari-metrics-collector/jersey-json-1.11.jar:/usr/lib/ambari-metrics-collector/jersey-server-1.11.jar:/usr/lib/ambari-metrics-collector/jersey-servlet-1.11.jar:/usr/lib/ambari-metrics-collector/jets3t-0.9.0.jar:/usr/lib/ambari-metrics-collector/jettison-1.1.jar:/usr/lib/ambari-metrics-collector/jetty-6.1.26.hwx.jar:/usr/lib/ambari-metrics-collector/jetty-sslengine-6.1.26.hwx.jar:/usr/lib/ambari-metrics-collector/jetty-util-6.1.26.hwx.jar:/usr/lib/ambari-metrics-collector/jline-2.11.jar:/usr/lib/ambari-metrics-collector/joda-time-1.6.jar:/usr/lib/ambari-metrics-collector/joni-2.1.2.jar:/usr/lib/ambari-metrics-collector/jsch-0.1.54.jar:/usr/lib/ambari-metrics-collector/json-smart-1.1.1.jar:/usr/lib/ambari-metrics-collector/jsp-2.1-6.1.14.jar:/usr/lib/ambari-metrics-collector/jsp-api-2.1-6.1.14.jar:/usr/lib/ambari-metrics-collector/jsp-api-2.1.jar:/usr/lib/ambari-metrics-collector/jsr305-2.0.1.jar:/usr/lib/ambari-metrics-collector/leveldbjni-all-1.8.jar:/usr/lib/ambari-metrics-collector/libthrift-0.9.0.jar:/usr/lib/ambari-metrics-collector/log4j-1.2.15.jar:/usr/lib/ambari-metrics-collector/metrics-core-2.2.0.jar:/usr/lib/ambari-metrics-collector/metrics-core-3.0.1.jar:/usr/lib/ambari-metrics-collector/metrics-core-3.1.0.jar:/usr/lib/ambari-metrics-collector/netty-3.10.5.Final.jar:/usr/lib/ambari-metrics-collector/netty-all-4.0.23.Final.jar:/usr/lib/ambari-metrics-collector/nimbus-jose-jwt-3.9.jar:/usr/lib/ambari-metrics-collector/okhttp-2.4.0.jar:/usr/lib/ambari-metrics-collector/okio-1.4.0.jar:/usr/lib/ambari-metrics-collector/paranamer-2.3.jar:/usr/lib/ambari-metrics-collector/phoenix-core-4.7.0.2.6.2.0-205.jar:/usr/lib/ambari-metrics-collector/protobuf-java-2.5.0.jar:/usr/lib/ambari-metrics-collector/servlet-api-2.5-6.1.14.jar:/usr/lib/ambari-metrics-collector/servlet-api-2.5.jar:/usr/lib/ambari-metrics-collector/slf4j-api-1.7.2.jar:/usr/lib/ambari-metrics-collector/slf4j-log4j12-1.7.2.jar:/usr/lib/ambari-metrics-collector/snakeyaml-1.12.jar:/usr/lib/ambari-metrics-collector/snappy-0.3.jar:/usr/lib/ambari-metrics-collector/snappy-java-1.0.4.1.jar:/usr/lib/ambari-metrics-collector/sqlline-1.1.8.jar:/usr/lib/ambari-metrics-collector/stax-api-1.0.1.jar:/usr/lib/ambari-metrics-collector/stax-api-1.0-2.jar:/usr/lib/ambari-metrics-collector/stringtemplate-3.2.1.jar:/usr/lib/ambari-metrics-collector/tephra-api-0.7.0.jar:/usr/lib/ambari-metrics-collector/tephra-core-0.7.0.jar:/usr/lib/ambari-metrics-collector/tephra-hbase-compat-1.1-0.7.0.jar:/usr/lib/ambari-metrics-collector/tools-1.7.0.jar:/usr/lib/ambari-metrics-collector/twill-api-0.6.0-incubating.jar:/usr/lib/ambari-metrics-collector/twill-common-0.6.0-incubating.jar:/usr/lib/ambari-metrics-collector/twill-core-0.6.0-incubating.jar:/usr/lib/ambari-metrics-collector/twill-discovery-api-0.6.0-incubating.jar:/usr/lib/ambari-metrics-collector/twill-discovery-core-0.6.0-incubating.jar:/usr/lib/ambari-metrics-collector/twill-zookeeper-0.6.0-incubating.jar:/usr/lib/ambari-metrics-collector/xercesImpl-2.11.0.jar:/usr/lib/ambari-metrics-collector/xml-apis-1.4.01.jar:/usr/lib/ambari-metrics-collector/xmlenc-0.52.jar:/usr/lib/ambari-metrics-collector/xz-1.0.jar:/usr/lib/ambari-metrics-collector/zkclient-0.9.jar:/usr/lib/ambari-metrics-collector/zookeeper-3.4.9.jar:/usr/hdp/current/hadoop-client/azure-data-lake-store-sdk-2.1.4.jar:/usr/hdp/current/hadoop-client/hadoop-annotations-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-client/hadoop-annotations.jar:/usr/hdp/current/hadoop-client/hadoop-auth-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-client/hadoop-auth.jar:/usr/hdp/current/hadoop-client/hadoop-aws-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-client/hadoop-aws.jar:/usr/hdp/current/hadoop-client/hadoop-azure-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-client/hadoop-azure-datalake-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-client/hadoop-azure-datalake.jar:/usr/hdp/current/hadoop-client/hadoop-azure.jar:/usr/hdp/current/hadoop-client/hadoop-common-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-client/hadoop-common-2.7.3.2.6.2.0-205-tests.jar:/usr/hdp/current/hadoop-client/hadoop-common.jar:/usr/hdp/current/hadoop-client/hadoop-common-tests.jar:/usr/hdp/current/hadoop-client/hadoop-nfs-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-client/hadoop-nfs.jar:/usr/hdp/current/hadoop-client/lib/activation-1.1.jar:/usr/hdp/current/hadoop-client/lib/apacheds-i18n-2.0.0-M15.jar:/usr/hdp/current/hadoop-client/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/hdp/current/hadoop-client/lib/api-asn1-api-1.0.0-M20.jar:/usr/hdp/current/hadoop-client/lib/api-util-1.0.0-M20.jar:/usr/hdp/current/hadoop-client/lib/asm-3.2.jar:/usr/hdp/current/hadoop-client/lib/avro-1.7.4.jar:/usr/hdp/current/hadoop-client/lib/aws-java-sdk-core-1.10.6.jar:/usr/hdp/current/hadoop-client/lib/aws-java-sdk-kms-1.10.6.jar:/usr/hdp/current/hadoop-client/lib/aws-java-sdk-s3-1.10.6.jar:/usr/hdp/current/hadoop-client/lib/azure-keyvault-core-0.8.0.jar:/usr/hdp/current/hadoop-client/lib/azure-storage-5.3.0.jar:/usr/hdp/current/hadoop-client/lib/commons-beanutils-1.7.0.jar:/usr/hdp/current/hadoop-client/lib/commons-beanutils-core-1.8.0.jar:/usr/hdp/current/hadoop-client/lib/commons-cli-1.2.jar:/usr/hdp/current/hadoop-client/lib/commons-codec-1.4.jar:/usr/hdp/current/hadoop-client/lib/commons-collections-3.2.2.jar:/usr/hdp/current/hadoop-client/lib/commons-compress-1.4.1.jar:/usr/hdp/current/hadoop-client/lib/commons-configuration-1.6.jar:/usr/hdp/current/hadoop-client/lib/commons-digester-1.8.jar:/usr/hdp/current/hadoop-client/lib/commons-io-2.4.jar:/usr/hdp/current/hadoop-client/lib/commons-lang-2.6.jar:/usr/hdp/current/hadoop-client/lib/commons-lang3-3.4.jar:/usr/hdp/current/hadoop-client/lib/commons-logging-1.1.3.jar:/usr/hdp/current/hadoop-client/lib/commons-math3-3.1.1.jar:/usr/hdp/current/hadoop-client/lib/commons-net-3.1.jar:/usr/hdp/current/hadoop-client/lib/curator-client-2.7.1.jar:/usr/hdp/current/hadoop-client/lib/curator-framework-2.7.1.jar:/usr/hdp/current/hadoop-client/lib/curator-recipes-2.7.1.jar:/usr/hdp/current/hadoop-client/lib/gson-2.2.4.jar:/usr/hdp/current/hadoop-client/lib/guava-11.0.2.jar:/usr/hdp/current/hadoop-client/lib/hamcrest-core-1.3.jar:/usr/hdp/current/hadoop-client/lib/htrace-core-3.1.0-incubating.jar:/usr/hdp/current/hadoop-client/lib/httpclient-4.5.2.jar:/usr/hdp/current/hadoop-client/lib/httpcore-4.4.4.jar:/usr/hdp/current/hadoop-client/lib/jackson-annotations-2.2.3.jar:/usr/hdp/current/hadoop-client/lib/jackson-core-2.2.3.jar:/usr/hdp/current/hadoop-client/lib/jackson-core-asl-1.9.13.jar:/usr/hdp/current/hadoop-client/lib/jackson-databind-2.2.3.jar:/usr/hdp/current/hadoop-client/lib/jackson-jaxrs-1.9.13.jar:/usr/hdp/current/hadoop-client/lib/jackson-mapper-asl-1.9.13.jar:/usr/hdp/current/hadoop-client/lib/jackson-xc-1.9.13.jar:/usr/hdp/current/hadoop-client/lib/java-xmlbuilder-0.4.jar:/usr/hdp/current/hadoop-client/lib/jaxb-api-2.2.2.jar:/usr/hdp/current/hadoop-client/lib/jaxb-impl-2.2.3-1.jar:/usr/hdp/current/hadoop-client/lib/jcip-annotations-1.0.jar:/usr/hdp/current/hadoop-client/lib/jersey-core-1.9.jar:/usr/hdp/current/hadoop-client/lib/jersey-json-1.9.jar:/usr/hdp/current/hadoop-client/lib/jersey-server-1.9.jar:/usr/hdp/current/hadoop-client/lib/jets3t-0.9.0.jar:/usr/hdp/current/hadoop-client/lib/jettison-1.1.jar:/usr/hdp/current/hadoop-client/lib/jetty-6.1.26.hwx.jar:/usr/hdp/current/hadoop-client/lib/jetty-sslengine-6.1.26.hwx.jar:/usr/hdp/current/hadoop-client/lib/jetty-util-6.1.26.hwx.jar:/usr/hdp/current/hadoop-client/lib/joda-time-2.9.4.jar:/usr/hdp/current/hadoop-client/lib/jsch-0.1.54.jar:/usr/hdp/current/hadoop-client/lib/json-smart-1.1.1.jar:/usr/hdp/current/hadoop-client/lib/jsp-api-2.1.jar:/usr/hdp/current/hadoop-client/lib/jsr305-3.0.0.jar:/usr/hdp/current/hadoop-client/lib/junit-4.11.jar:/usr/hdp/current/hadoop-client/lib/log4j-1.2.17.jar:/usr/hdp/current/hadoop-client/lib/mockito-all-1.8.5.jar:/usr/hdp/current/hadoop-client/lib/netty-3.6.2.Final.jar:/usr/hdp/current/hadoop-client/lib/nimbus-jose-jwt-3.9.jar:/usr/hdp/current/hadoop-client/lib/ojdbc6.jar:/usr/hdp/current/hadoop-client/lib/paranamer-2.3.jar:/usr/hdp/current/hadoop-client/lib/protobuf-java-2.5.0.jar:/usr/hdp/current/hadoop-client/lib/ranger-hdfs-plugin-shim-0.7.0.2.6.2.0-205.jar:/usr/hdp/current/hadoop-client/lib/ranger-plugin-classloader-0.7.0.2.6.2.0-205.jar:/usr/hdp/current/hadoop-client/lib/ranger-yarn-plugin-shim-0.7.0.2.6.2.0-205.jar:/usr/hdp/current/hadoop-client/lib/servlet-api-2.5.jar:/usr/hdp/current/hadoop-client/lib/slf4j-api-1.7.10.jar:/usr/hdp/current/hadoop-client/lib/slf4j-log4j12-1.7.10.jar:/usr/hdp/current/hadoop-client/lib/snappy-java-1.0.4.1.jar:/usr/hdp/current/hadoop-client/lib/stax-api-1.0-2.jar:/usr/hdp/current/hadoop-client/lib/xmlenc-0.52.jar:/usr/hdp/current/hadoop-client/lib/xz-1.0.jar:/usr/hdp/current/hadoop-client/lib/zookeeper-3.4.6.2.6.2.0-205.jar:/usr/hdp/current/hadoop-hdfs-client/hadoop-hdfs-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-hdfs-client/hadoop-hdfs-2.7.3.2.6.2.0-205-tests.jar:/usr/hdp/current/hadoop-hdfs-client/hadoop-hdfs.jar:/usr/hdp/current/hadoop-hdfs-client/hadoop-hdfs-nfs-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-hdfs-client/hadoop-hdfs-nfs.jar:/usr/hdp/current/hadoop-hdfs-client/hadoop-hdfs-tests.jar:/usr/hdp/current/hadoop-hdfs-client/lib/asm-3.2.jar:/usr/hdp/current/hadoop-hdfs-client/lib/commons-cli-1.2.jar:/usr/hdp/current/hadoop-hdfs-client/lib/commons-codec-1.4.jar:/usr/hdp/current/hadoop-hdfs-client/lib/commons-daemon-1.0.13.jar:/usr/hdp/current/hadoop-hdfs-client/lib/commons-io-2.4.jar:/usr/hdp/current/hadoop-hdfs-client/lib/commons-lang-2.6.jar:/usr/hdp/current/hadoop-hdfs-client/lib/commons-logging-1.1.3.jar:/usr/hdp/current/hadoop-hdfs-client/lib/guava-11.0.2.jar:/usr/hdp/current/hadoop-hdfs-client/lib/htrace-core-3.1.0-incubating.jar:/usr/hdp/current/hadoop-hdfs-client/lib/jackson-annotations-2.2.3.jar:/usr/hdp/current/hadoop-hdfs-client/lib/jackson-core-2.2.3.jar:/usr/hdp/current/hadoop-hdfs-client/lib/jackson-core-asl-1.9.13.jar:/usr/hdp/current/hadoop-hdfs-client/lib/jackson-databind-2.2.3.jar:/usr/hdp/current/hadoop-hdfs-client/lib/jackson-mapper-asl-1.9.13.jar:/usr/hdp/current/hadoop-hdfs-client/lib/jersey-core-1.9.jar:/usr/hdp/current/hadoop-hdfs-client/lib/jersey-server-1.9.jar:/usr/hdp/current/hadoop-hdfs-client/lib/jetty-6.1.26.hwx.jar:/usr/hdp/current/hadoop-hdfs-client/lib/jetty-util-6.1.26.hwx.jar:/usr/hdp/current/hadoop-hdfs-client/lib/jsr305-3.0.0.jar:/usr/hdp/current/hadoop-hdfs-client/lib/leveldbjni-all-1.8.jar:/usr/hdp/current/hadoop-hdfs-client/lib/log4j-1.2.17.jar:/usr/hdp/current/hadoop-hdfs-client/lib/netty-3.6.2.Final.jar:/usr/hdp/current/hadoop-hdfs-client/lib/netty-all-4.0.23.Final.jar:/usr/hdp/current/hadoop-hdfs-client/lib/okhttp-2.4.0.jar:/usr/hdp/current/hadoop-hdfs-client/lib/okio-1.4.0.jar:/usr/hdp/current/hadoop-hdfs-client/lib/protobuf-java-2.5.0.jar:/usr/hdp/current/hadoop-hdfs-client/lib/servlet-api-2.5.jar:/usr/hdp/current/hadoop-hdfs-client/lib/xercesImpl-2.9.1.jar:/usr/hdp/current/hadoop-hdfs-client/lib/xml-apis-1.3.04.jar:/usr/hdp/current/hadoop-hdfs-client/lib/xmlenc-0.52.jar:/usr/hdp/current/hadoop-mapreduce-client/activation-1.1.jar:/usr/hdp/current/hadoop-mapreduce-client/apacheds-i18n-2.0.0-M15.jar:/usr/hdp/current/hadoop-mapreduce-client/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/hdp/current/hadoop-mapreduce-client/api-asn1-api-1.0.0-M20.jar:/usr/hdp/current/hadoop-mapreduce-client/api-util-1.0.0-M20.jar:/usr/hdp/current/hadoop-mapreduce-client/asm-3.2.jar:/usr/hdp/current/hadoop-mapreduce-client/avro-1.7.4.jar:/usr/hdp/current/hadoop-mapreduce-client/azure-keyvault-core-0.8.0.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-beanutils-1.7.0.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-beanutils-core-1.8.0.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-cli-1.2.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-codec-1.4.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-collections-3.2.2.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-compress-1.4.1.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-configuration-1.6.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-digester-1.8.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-httpclient-3.1.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-io-2.4.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-lang-2.6.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-lang3-3.4.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-logging-1.1.3.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-math3-3.1.1.jar:/usr/hdp/current/hadoop-mapreduce-client/commons-net-3.1.jar:/usr/hdp/current/hadoop-mapreduce-client/curator-client-2.7.1.jar:/usr/hdp/current/hadoop-mapreduce-client/curator-framework-2.7.1.jar:/usr/hdp/current/hadoop-mapreduce-client/curator-recipes-2.7.1.jar:/usr/hdp/current/hadoop-mapreduce-client/gson-2.2.4.jar:/usr/hdp/current/hadoop-mapreduce-client/guava-11.0.2.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-ant-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-ant.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-archives-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-archives.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-auth-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-auth.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-datajoin-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-datajoin.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-distcp-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-distcp.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-extras-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-extras.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-gridmix-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-gridmix.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-app-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-app.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-common-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-common.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-hs-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-hs.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-hs-plugins-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-hs-plugins.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient-2.7.3.2.6.2.0-205-tests.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient-tests.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-shuffle-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-shuffle.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-examples-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-examples.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-openstack-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-openstack.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-rumen-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-rumen.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-sls-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-sls.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar:/usr/hdp/current/hadoop-mapreduce-client/hamcrest-core-1.3.jar:/usr/hdp/current/hadoop-mapreduce-client/htrace-core-3.1.0-incubating.jar:/usr/hdp/current/hadoop-mapreduce-client/httpclient-4.5.2.jar:/usr/hdp/current/hadoop-mapreduce-client/httpcore-4.4.4.jar:/usr/hdp/current/hadoop-mapreduce-client/jackson-core-asl-1.9.13.jar:/usr/hdp/current/hadoop-mapreduce-client/jackson-jaxrs-1.9.13.jar:/usr/hdp/current/hadoop-mapreduce-client/jackson-mapper-asl-1.9.13.jar:/usr/hdp/current/hadoop-mapreduce-client/jackson-xc-1.9.13.jar:/usr/hdp/current/hadoop-mapreduce-client/java-xmlbuilder-0.4.jar:/usr/hdp/current/hadoop-mapreduce-client/jaxb-api-2.2.2.jar:/usr/hdp/current/hadoop-mapreduce-client/jaxb-impl-2.2.3-1.jar:/usr/hdp/current/hadoop-mapreduce-client/jcip-annotations-1.0.jar:/usr/hdp/current/hadoop-mapreduce-client/jersey-core-1.9.jar:/usr/hdp/current/hadoop-mapreduce-client/jersey-json-1.9.jar:/usr/hdp/current/hadoop-mapreduce-client/jersey-server-1.9.jar:/usr/hdp/current/hadoop-mapreduce-client/jets3t-0.9.0.jar:/usr/hdp/current/hadoop-mapreduce-client/jettison-1.1.jar:/usr/hdp/current/hadoop-mapreduce-client/jetty-6.1.26.hwx.jar:/usr/hdp/current/hadoop-mapreduce-client/jetty-sslengine-6.1.26.hwx.jar:/usr/hdp/current/hadoop-mapreduce-client/jetty-util-6.1.26.hwx.jar:/usr/hdp/current/hadoop-mapreduce-client/jsch-0.1.54.jar:/usr/hdp/current/hadoop-mapreduce-client/json-smart-1.1.1.jar:/usr/hdp/current/hadoop-mapreduce-client/jsp-api-2.1.jar:/usr/hdp/current/hadoop-mapreduce-client/jsr305-3.0.0.jar:/usr/hdp/current/hadoop-mapreduce-client/junit-4.11.jar:/usr/hdp/current/hadoop-mapreduce-client/log4j-1.2.17.jar:/usr/hdp/current/hadoop-mapreduce-client/metrics-core-3.0.1.jar:/usr/hdp/current/hadoop-mapreduce-client/mockito-all-1.8.5.jar:/usr/hdp/current/hadoop-mapreduce-client/netty-3.6.2.Final.jar:/usr/hdp/current/hadoop-mapreduce-client/nimbus-jose-jwt-3.9.jar:/usr/hdp/current/hadoop-mapreduce-client/okhttp-2.4.0.jar:/usr/hdp/current/hadoop-mapreduce-client/okio-1.4.0.jar:/usr/hdp/current/hadoop-mapreduce-client/paranamer-2.3.jar:/usr/hdp/current/hadoop-mapreduce-client/protobuf-java-2.5.0.jar:/usr/hdp/current/hadoop-mapreduce-client/servlet-api-2.5.jar:/usr/hdp/current/hadoop-mapreduce-client/snappy-java-1.0.4.1.jar:/usr/hdp/current/hadoop-mapreduce-client/stax-api-1.0-2.jar:/usr/hdp/current/hadoop-mapreduce-client/xmlenc-0.52.jar:/usr/hdp/current/hadoop-mapreduce-client/xz-1.0.jar:/usr/hdp/current/hadoop-mapreduce-client/zookeeper-3.4.6.2.6.2.0-205.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/aopalliance-1.0.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/asm-3.2.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/avro-1.7.4.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/commons-compress-1.4.1.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/commons-io-2.4.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/guice-3.0.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/guice-servlet-3.0.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/hamcrest-core-1.3.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/jackson-core-asl-1.9.13.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/jackson-mapper-asl-1.9.13.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/javax.inject-1.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/jersey-core-1.9.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/jersey-guice-1.9.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/jersey-server-1.9.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/junit-4.11.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/leveldbjni-all-1.8.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/log4j-1.2.17.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/netty-3.6.2.Final.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/paranamer-2.3.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/protobuf-java-2.5.0.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/snappy-java-1.0.4.1.jar:/usr/hdp/current/hadoop-mapreduce-client/lib/xz-1.0.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-api-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-api.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-applications-distributedshell-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-applications-distributedshell.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-applications-unmanaged-am-launcher-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-applications-unmanaged-am-launcher.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-client-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-client.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-common-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-common.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-registry-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-registry.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-applicationhistoryservice-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-applicationhistoryservice.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-common-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-common.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-nodemanager-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-nodemanager.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-resourcemanager-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-resourcemanager.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-sharedcachemanager-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-sharedcachemanager.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-tests-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-tests.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-timeline-pluginstorage-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-timeline-pluginstorage.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-web-proxy-2.7.3.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-web-proxy.jar:/usr/hdp/current/hadoop-yarn-client/lib/activation-1.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/aopalliance-1.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/apacheds-i18n-2.0.0-M15.jar:/usr/hdp/current/hadoop-yarn-client/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/hdp/current/hadoop-yarn-client/lib/api-asn1-api-1.0.0-M20.jar:/usr/hdp/current/hadoop-yarn-client/lib/api-util-1.0.0-M20.jar:/usr/hdp/current/hadoop-yarn-client/lib/asm-3.2.jar:/usr/hdp/current/hadoop-yarn-client/lib/avro-1.7.4.jar:/usr/hdp/current/hadoop-yarn-client/lib/azure-keyvault-core-0.8.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/azure-storage-5.3.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-beanutils-1.7.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-beanutils-core-1.8.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-cli-1.2.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-codec-1.4.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-collections-3.2.2.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-compress-1.4.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-configuration-1.6.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-digester-1.8.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-io-2.4.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-lang-2.6.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-lang3-3.4.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-logging-1.1.3.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-math3-3.1.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/commons-net-3.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/curator-client-2.7.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/curator-framework-2.7.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/curator-recipes-2.7.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/fst-2.24.jar:/usr/hdp/current/hadoop-yarn-client/lib/gson-2.2.4.jar:/usr/hdp/current/hadoop-yarn-client/lib/guava-11.0.2.jar:/usr/hdp/current/hadoop-yarn-client/lib/guice-3.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/guice-servlet-3.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/htrace-core-3.1.0-incubating.jar:/usr/hdp/current/hadoop-yarn-client/lib/httpclient-4.5.2.jar:/usr/hdp/current/hadoop-yarn-client/lib/httpcore-4.4.4.jar:/usr/hdp/current/hadoop-yarn-client/lib/jackson-annotations-2.2.3.jar:/usr/hdp/current/hadoop-yarn-client/lib/jackson-core-2.2.3.jar:/usr/hdp/current/hadoop-yarn-client/lib/jackson-core-asl-1.9.13.jar:/usr/hdp/current/hadoop-yarn-client/lib/jackson-databind-2.2.3.jar:/usr/hdp/current/hadoop-yarn-client/lib/jackson-jaxrs-1.9.13.jar:/usr/hdp/current/hadoop-yarn-client/lib/jackson-mapper-asl-1.9.13.jar:/usr/hdp/current/hadoop-yarn-client/lib/jackson-xc-1.9.13.jar:/usr/hdp/current/hadoop-yarn-client/lib/javassist-3.18.1-GA.jar:/usr/hdp/current/hadoop-yarn-client/lib/javax.inject-1.jar:/usr/hdp/current/hadoop-yarn-client/lib/java-xmlbuilder-0.4.jar:/usr/hdp/current/hadoop-yarn-client/lib/jaxb-api-2.2.2.jar:/usr/hdp/current/hadoop-yarn-client/lib/jaxb-impl-2.2.3-1.jar:/usr/hdp/current/hadoop-yarn-client/lib/jcip-annotations-1.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/jersey-client-1.9.jar:/usr/hdp/current/hadoop-yarn-client/lib/jersey-core-1.9.jar:/usr/hdp/current/hadoop-yarn-client/lib/jersey-guice-1.9.jar:/usr/hdp/current/hadoop-yarn-client/lib/jersey-json-1.9.jar:/usr/hdp/current/hadoop-yarn-client/lib/jersey-server-1.9.jar:/usr/hdp/current/hadoop-yarn-client/lib/jets3t-0.9.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/jettison-1.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/jetty-6.1.26.hwx.jar:/usr/hdp/current/hadoop-yarn-client/lib/jetty-sslengine-6.1.26.hwx.jar:/usr/hdp/current/hadoop-yarn-client/lib/jetty-util-6.1.26.hwx.jar:/usr/hdp/current/hadoop-yarn-client/lib/jsch-0.1.54.jar:/usr/hdp/current/hadoop-yarn-client/lib/json-smart-1.1.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/jsp-api-2.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/jsr305-3.0.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/leveldbjni-all-1.8.jar:/usr/hdp/current/hadoop-yarn-client/lib/log4j-1.2.17.jar:/usr/hdp/current/hadoop-yarn-client/lib/metrics-core-3.0.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/netty-3.6.2.Final.jar:/usr/hdp/current/hadoop-yarn-client/lib/nimbus-jose-jwt-3.9.jar:/usr/hdp/current/hadoop-yarn-client/lib/objenesis-2.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/paranamer-2.3.jar:/usr/hdp/current/hadoop-yarn-client/lib/protobuf-java-2.5.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/servlet-api-2.5.jar:/usr/hdp/current/hadoop-yarn-client/lib/snappy-java-1.0.4.1.jar:/usr/hdp/current/hadoop-yarn-client/lib/stax-api-1.0-2.jar:/usr/hdp/current/hadoop-yarn-client/lib/xmlenc-0.52.jar:/usr/hdp/current/hadoop-yarn-client/lib/xz-1.0.jar:/usr/hdp/current/hadoop-yarn-client/lib/zookeeper-3.4.6.2.6.2.0-205.jar:/usr/hdp/current/hadoop-yarn-client/lib/zookeeper-3.4.6.2.6.2.0-205-tests.jar:/usr/hdp/current/tez-client/*.jar:/usr/hdp/current/tez-client/lib/*.jar:/jars/*.jar: -Xms128m -Xmx8192m com.hortonworks.smartsense.activity.ActivityAnalyzerFacade",
+                "hadoop" : true
+              },
+              {
+                "user" : "root",
+                "pid" : 18404,
+                "command" : "/usr/java/jdk1.8.0_144/bin/java -Dhdp.version=2.6.2.0-205 -Dlog.file.name=activity-explorer.log -DSmartSenseActivityExplorer -Dfile.encoding=UTF-8 -Xms256m -Xmx1024m -XX:MaxPermSize=256m -Dlog4j.configuration=file:///etc/smartsense-activity/conf/log4j.properties -Dzeppelin.log.file=/var/log/smartsense-activity/activity-explorer.log -cp :/etc/ams-hbase/conf::/usr/hdp/share/hst/activity-explorer/lib/*:/usr/hdp/share/hst/activity-explorer/*:/etc/ams-hbase/conf::/etc/smartsense-activity/conf org.apache.zeppelin.server.ZeppelinServer",
+                "hadoop" : false
+              },
+              {
+                "user" : "hdfs",
+                "pid" : 23347,
+                "command" : "/usr/java/jdk1.8.0_144/bin/java -Dproc_datanode -Xmx1024m -Dhdp.version=2.6.2.0-205 -Djava.net.preferIPv4Stack=true -Dhdp.version= -Djava.net.preferIPv4Stack=true -Dhdp.version= -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/var/log/hadoop/hdfs -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/usr/hdp/2.6.2.0-205/hadoop -Dhadoop.id.str=hdfs -Dhadoop.root.logger=INFO,console -Djava.library.path=:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Dhdp.version=2.6.2.0-205 -Dhadoop.log.dir=/var/log/hadoop/hdfs -Dhadoop.log.file=hadoop-hdfs-datanode-master.log -Dhadoop.home.dir=/usr/hdp/2.6.2.0-205/hadoop -Dhadoop.id.str=hdfs -Dhadoop.root.logger=INFO,RFA -Djava.library.path=:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -server -server -XX:ParallelGCThreads=4 -XX:+UseConcMarkSweepGC -XX:ErrorFile=/var/log/hadoop/hdfs/hs_err_pid%p.log -XX:NewSize=200m -XX:MaxNewSize=200m -Xloggc:/var/log/hadoop/hdfs/gc.log-201710171241 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -Xms1024m -Xmx1024m -Dhadoop.security.logger=INFO,DRFAS -Dhdfs.audit.logger=INFO,DRFAAUDIT -server -XX:ParallelGCThreads=4 -XX:+UseConcMarkSweepGC -XX:ErrorFile=/var/log/hadoop/hdfs/hs_err_pid%p.log -XX:NewSize=200m -XX:MaxNewSize=200m -Xloggc:/var/log/hadoop/hdfs/gc.log-201710171241 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -Xms1024m -Xmx1024m -Dhadoop.security.logger=INFO,DRFAS -Dhdfs.audit.logger=INFO,DRFAAUDIT -server -XX:ParallelGCThreads=4 -XX:+UseConcMarkSweepGC -XX:ErrorFile=/var/log/hadoop/hdfs/hs_err_pid%p.log -XX:NewSize=200m -XX:MaxNewSize=200m -Xloggc:/var/log/hadoop/hdfs/gc.log-201710171241 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -Xms1024m -Xmx1024m -Dhadoop.security.logger=INFO,DRFAS -Dhdfs.audit.logger=INFO,DRFAAUDIT -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCMSInitiatingOccupancyOnly -Dhadoop.security.logger=INFO,RFAS org.apache.hadoop.hdfs.server.datanode.DataNode",
+                "hadoop" : true
+              },
+              {
+                "user" : "hdfs",
+                "pid" : 23594,
+                "command" : "/usr/java/jdk1.8.0_144/bin/java -Dproc_namenode -Xmx1024m -Dhdp.version=2.6.2.0-205 -Djava.net.preferIPv4Stack=true -Dhdp.version= -Djava.net.preferIPv4Stack=true -Dhdp.version= -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/var/log/hadoop/hdfs -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/usr/hdp/2.6.2.0-205/hadoop -Dhadoop.id.str=hdfs -Dhadoop.root.logger=INFO,console -Djava.library.path=:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Dhdp.version=2.6.2.0-205 -Dhadoop.log.dir=/var/log/hadoop/hdfs -Dhadoop.log.file=hadoop-hdfs-namenode-master.log -Dhadoop.home.dir=/usr/hdp/2.6.2.0-205/hadoop -Dhadoop.id.str=hdfs -Dhadoop.root.logger=INFO,RFA -Djava.library.path=:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -server -XX:ParallelGCThreads=8 -XX:+UseConcMarkSweepGC -XX:ErrorFile=/var/log/hadoop/hdfs/hs_err_pid%p.log -XX:NewSize=128m -XX:MaxNewSize=128m -Xloggc:/var/log/hadoop/hdfs/gc.log-201710171241 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCMSInitiatingOccupancyOnly -Xms1024m -Xmx1024m -Dhadoop.security.logger=INFO,DRFAS -Dhdfs.audit.logger=INFO,DRFAAUDIT -XX:OnOutOfMemoryError=\"/usr/hdp/current/hadoop-hdfs-namenode/bin/kill-name-node\" -Dorg.mortbay.jetty.Request.maxFormContentSize=-1 -server -XX:ParallelGCThreads=8 -XX:+UseConcMarkSweepGC -XX:ErrorFile=/var/log/hadoop/hdfs/hs_err_pid%p.log -XX:NewSize=128m -XX:MaxNewSize=128m -Xloggc:/var/log/hadoop/hdfs/gc.log-201710171241 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCMSInitiatingOccupancyOnly -Xms1024m -Xmx1024m -Dhadoop.security.logger=INFO,DRFAS -Dhdfs.audit.logger=INFO,DRFAAUDIT -XX:OnOutOfMemoryError=\"/usr/hdp/current/hadoop-hdfs-namenode/bin/kill-name-node\" -Dorg.mortbay.jetty.Request.maxFormContentSize=-1 -server -XX:ParallelGCThreads=8 -XX:+UseConcMarkSweepGC -XX:ErrorFile=/var/log/hadoop/hdfs/hs_err_pid%p.log -XX:NewSize=128m -XX:MaxNewSize=128m -Xloggc:/var/log/hadoop/hdfs/gc.log-201710171241 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCMSInitiatingOccupancyOnly -Xms1024m -Xmx1024m -Dhadoop.security.logger=INFO,DRFAS -Dhdfs.audit.logger=INFO,DRFAAUDIT -XX:OnOutOfMemoryError=\"/usr/hdp/current/hadoop-hdfs-namenode/bin/kill-name-node\" -Dorg.mortbay.jetty.Request.maxFormContentSize=-1 -Dhadoop.security.logger=INFO,RFAS org.apache.hadoop.hdfs.server.namenode.NameNode",
+                "hadoop" : true
+              },
+              {
+                "user" : "root",
+                "pid" : 24007,
+                "command" : "jsvc.exec -Dproc_nfs3 -outfile /var/log/hadoop/root/nfs3_jsvc.out -errfile /var/log/hadoop/root/nfs3_jsvc.err -pidfile /var/run/hadoop/root/hadoop_privileged_nfs3.pid -nodetach -user hdfs -cp /usr/hdp/current/hadoop-client/conf:/usr/hdp/2.6.2.0-205/hadoop/lib/*:/usr/hdp/2.6.2.0-205/hadoop/.//*:/usr/hdp/2.6.2.0-205/hadoop-hdfs/./:/usr/hdp/2.6.2.0-205/hadoop-hdfs/lib/*:/usr/hdp/2.6.2.0-205/hadoop-hdfs/.//*:/usr/hdp/2.6.2.0-205/hadoop-yarn/lib/*:/usr/hdp/2.6.2.0-205/hadoop-yarn/.//*:/usr/hdp/2.6.2.0-205/hadoop-mapreduce/lib/*:/usr/hdp/2.6.2.0-205/hadoop-mapreduce/.//* -Xmx1024m -Dhdp.version=2.6.2.0-205 -Djava.net.preferIPv4Stack=true -Dhdp.version= -Djava.net.preferIPv4Stack=true -Dhdp.version= -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/var/log/hadoop/ -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/usr/hdp/2.6.2.0-205/hadoop -Dhadoop.id.str= -Dhadoop.root.logger=INFO,console -Djava.library.path=:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Dhdp.version=2.6.2.0-205 -Dhadoop.log.dir=/var/log/hadoop/ -Dhadoop.log.file=hadoop-hdfs-nfs3-master.log -Dhadoop.home.dir=/usr/hdp/2.6.2.0-205/hadoop -Dhadoop.id.str= -Dhadoop.root.logger=INFO,RFA -Djava.library.path=:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/var/log/hadoop/root -Dhadoop.id.str=hdfs -Xmx1024m -Dhadoop.security.logger=ERROR,DRFAS -Dhadoop.security.logger=INFO,RFAS org.apache.hadoop.hdfs.nfs.nfs3.PrivilegedNfsGatewayStarter",
+                "hadoop" : true
+              },
+              {
+                "user" : "hdfs",
+                "pid" : 24038,
+                "command" : "jsvc.exec -Dproc_nfs3 -outfile /var/log/hadoop/root/nfs3_jsvc.out -errfile /var/log/hadoop/root/nfs3_jsvc.err -pidfile /var/run/hadoop/root/hadoop_privileged_nfs3.pid -nodetach -user hdfs -cp /usr/hdp/current/hadoop-client/conf:/usr/hdp/2.6.2.0-205/hadoop/lib/*:/usr/hdp/2.6.2.0-205/hadoop/.//*:/usr/hdp/2.6.2.0-205/hadoop-hdfs/./:/usr/hdp/2.6.2.0-205/hadoop-hdfs/lib/*:/usr/hdp/2.6.2.0-205/hadoop-hdfs/.//*:/usr/hdp/2.6.2.0-205/hadoop-yarn/lib/*:/usr/hdp/2.6.2.0-205/hadoop-yarn/.//*:/usr/hdp/2.6.2.0-205/hadoop-mapreduce/lib/*:/usr/hdp/2.6.2.0-205/hadoop-mapreduce/.//* -Xmx1024m -Dhdp.version=2.6.2.0-205 -Djava.net.preferIPv4Stack=true -Dhdp.version= -Djava.net.preferIPv4Stack=true -Dhdp.version= -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/var/log/hadoop/ -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/usr/hdp/2.6.2.0-205/hadoop -Dhadoop.id.str= -Dhadoop.root.logger=INFO,console -Djava.library.path=:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Dhdp.version=2.6.2.0-205 -Dhadoop.log.dir=/var/log/hadoop/ -Dhadoop.log.file=hadoop-hdfs-nfs3-master.log -Dhadoop.home.dir=/usr/hdp/2.6.2.0-205/hadoop -Dhadoop.id.str= -Dhadoop.root.logger=INFO,RFA -Djava.library.path=:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/var/log/hadoop/root -Dhadoop.id.str=hdfs -Xmx1024m -Dhadoop.security.logger=ERROR,DRFAS -Dhadoop.security.logger=INFO,RFAS org.apache.hadoop.hdfs.nfs.nfs3.PrivilegedNfsGatewayStarter",
+                "hadoop" : true
+              },
+              {
+                "user" : "hdfs",
+                "pid" : 24171,
+                "command" : "/usr/java/jdk1.8.0_144/bin/java -Dproc_secondarynamenode -Xmx1024m -Dhdp.version=2.6.2.0-205 -Djava.net.preferIPv4Stack=true -Dhdp.version= -Djava.net.preferIPv4Stack=true -Dhdp.version= -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/var/log/hadoop/hdfs -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/usr/hdp/2.6.2.0-205/hadoop -Dhadoop.id.str=hdfs -Dhadoop.root.logger=INFO,console -Djava.library.path=:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Dhdp.version=2.6.2.0-205 -Dhadoop.log.dir=/var/log/hadoop/hdfs -Dhadoop.log.file=hadoop-hdfs-secondarynamenode-master.log -Dhadoop.home.dir=/usr/hdp/2.6.2.0-205/hadoop -Dhadoop.id.str=hdfs -Dhadoop.root.logger=INFO,RFA -Djava.library.path=:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native/Linux-amd64-64:/usr/hdp/current/hadoop-client/lib/native/Linux-amd64-64:/usr/hdp/2.6.2.0-205/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -server -XX:ParallelGCThreads=8 -XX:+UseConcMarkSweepGC -XX:ErrorFile=/var/log/hadoop/hdfs/hs_err_pid%p.log -XX:NewSize=128m -XX:MaxNewSize=128m -Xloggc:/var/log/hadoop/hdfs/gc.log-201710171241 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCMSInitiatingOccupancyOnly -Xms1024m -Xmx1024m -Dhadoop.security.logger=INFO,DRFAS -Dhdfs.audit.logger=INFO,DRFAAUDIT -XX:OnOutOfMemoryError=\"/usr/hdp/current/hadoop-hdfs-secondarynamenode/bin/kill-secondary-name-node\" -server -XX:ParallelGCThreads=8 -XX:+UseConcMarkSweepGC -XX:ErrorFile=/var/log/hadoop/hdfs/hs_err_pid%p.log -XX:NewSize=128m -XX:MaxNewSize=128m -Xloggc:/var/log/hadoop/hdfs/gc.log-201710171241 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCMSInitiatingOccupancyOnly -Xms1024m -Xmx1024m -Dhadoop.security.logger=INFO,DRFAS -Dhdfs.audit.logger=INFO,DRFAAUDIT -XX:OnOutOfMemoryError=\"/usr/hdp/current/hadoop-hdfs-secondarynamenode/bin/kill-secondary-name-node\" -server -XX:ParallelGCThreads=8 -XX:+UseConcMarkSweepGC -XX:ErrorFile=/var/log/hadoop/hdfs/hs_err_pid%p.log -XX:NewSize=128m -XX:MaxNewSize=128m -Xloggc:/var/log/hadoop/hdfs/gc.log-201710171241 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCMSInitiatingOccupancyOnly -Xms1024m -Xmx1024m -Dhadoop.security.logger=INFO,DRFAS -Dhdfs.audit.logger=INFO,DRFAAUDIT -XX:OnOutOfMemoryError=\"/usr/hdp/current/hadoop-hdfs-secondarynamenode/bin/kill-secondary-name-node\" -Dhadoop.security.logger=INFO,RFAS org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode",
+                "hadoop" : true
+              }
+            ],
+            "agentTimeStampAtReporting" : 1508216636535,
+            "serverTimeStampAtReporting" : 1508216636588,
+            "liveServices" : [
+              {
+                "desc" : "",
+                "name" : "ntp or chrony",
+                "status" : "Healthy"
+              }
+            ]
+          },
+          "umask" : 18,
+          "transparentHugePage" : "always",
+          "firewallRunning" : false,
+          "firewallName" : "ufw",
+          "hasUnlimitedJcePolicy" : false,
+          "reverseLookup" : true
+        },
+        "last_heartbeat_time" : 1508216653222,
+        "maintenance_state" : "OFF",
+        "os_arch" : "x86_64",
+        "os_type" : "ubuntu16",
+        "ph_cpu_count" : 4,
+        "public_host_name" : "master",
+        "rack_info" : "/default-rack",
+        "total_mem" : 7950372
+      },
+      "alerts_summary" : {
+        "CRITICAL" : 0,
+        "MAINTENANCE" : 0,
+        "OK" : 34,
+        "UNKNOWN" : 0,
+        "WARNING" : 0
+      },
+      "metrics" : {
+        "cpu" : {
+          "cpu_system" : 1.7,
+          "cpu_user" : 7.6
+        },
+        "disk" : {
+          "disk_free" : 420.0,
+          "disk_total" : 488.75,
+          "read_bytes" : 2.232452608E9,
+          "read_count" : 73680.0,
+          "read_time" : 2801060.0,
+          "write_bytes" : 1.73101568E9,
+          "write_count" : 27297.0,
+          "write_time" : 7828464.0
+        },
+        "load" : {
+          "load_one" : 0.99
+        },
+        "memory" : {
+          "mem_free" : 2014224.0,
+          "mem_total" : 7950372.0
+        }
+      },
+      "stack_versions" : [
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/stack_versions/1",
+          "HostStackVersions" : {
+            "cluster_name" : "mycluster",
+            "host_name" : "master",
+            "id" : 1,
+            "repository_version" : 2,
+            "stack" : "HDP",
+            "state" : "CURRENT",
+            "version" : "2.6"
+          },
+          "repository_versions" : [
+            {
+              "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/stack_versions/1/repository_versions/2",
+              "RepositoryVersions" : {
+                "display_name" : "HDP-2.6.2.0",
+                "id" : 2,
+                "repository_version" : "2.6.2.0-205",
+                "stack_name" : "HDP",
+                "stack_version" : "2.6"
+              }
+            }
+          ]
+        }
+      ],
+      "host_components" : [
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/ACTIVITY_ANALYZER",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "ACTIVITY_ANALYZER",
+            "display_name" : "Activity Analyzer",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "SMARTSENSE",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/ACTIVITY_EXPLORER",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "ACTIVITY_EXPLORER",
+            "display_name" : "Activity Explorer",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "SMARTSENSE",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/DATANODE",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "DATANODE",
+            "desired_admin_state" : "INSERVICE",
+            "display_name" : "DataNode",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "HDFS",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/HDFS_CLIENT",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "HDFS_CLIENT",
+            "display_name" : "HDFS Client",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "HDFS",
+            "stale_configs" : false,
+            "state" : "INSTALLED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/HST_AGENT",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "HST_AGENT",
+            "desired_admin_state" : "INSERVICE",
+            "display_name" : "HST Agent",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "SMARTSENSE",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/HST_SERVER",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "HST_SERVER",
+            "display_name" : "HST Server",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "SMARTSENSE",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/INFRA_SOLR",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "INFRA_SOLR",
+            "display_name" : "Infra Solr Instance",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "AMBARI_INFRA",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/INFRA_SOLR_CLIENT",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "INFRA_SOLR_CLIENT",
+            "display_name" : "Infra Solr Client",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "AMBARI_INFRA",
+            "stale_configs" : false,
+            "state" : "INSTALLED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/METRICS_COLLECTOR",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "METRICS_COLLECTOR",
+            "display_name" : "Metrics Collector",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "AMBARI_METRICS",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/METRICS_GRAFANA",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "METRICS_GRAFANA",
+            "display_name" : "Grafana",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "AMBARI_METRICS",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/METRICS_MONITOR",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "METRICS_MONITOR",
+            "desired_admin_state" : "INSERVICE",
+            "display_name" : "Metrics Monitor",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "AMBARI_METRICS",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/NAMENODE",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "NAMENODE",
+            "display_name" : "NameNode",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "HDFS",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/NFS_GATEWAY",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "NFS_GATEWAY",
+            "desired_admin_state" : "INSERVICE",
+            "display_name" : "NFSGateway",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "HDFS",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/SECONDARY_NAMENODE",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "SECONDARY_NAMENODE",
+            "display_name" : "SNameNode",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "HDFS",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/ZOOKEEPER_CLIENT",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "ZOOKEEPER_CLIENT",
+            "display_name" : "ZooKeeper Client",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "ZOOKEEPER",
+            "stale_configs" : false,
+            "state" : "INSTALLED"
+          }
+        },
+        {
+          "href" : "http://localhost:8080/api/v1/clusters/mycluster/hosts/master/host_components/ZOOKEEPER_SERVER",
+          "HostRoles" : {
+            "cluster_name" : "mycluster",
+            "component_name" : "ZOOKEEPER_SERVER",
+            "display_name" : "ZooKeeper Server",
+            "host_name" : "master",
+            "maintenance_state" : "OFF",
+            "service_name" : "ZOOKEEPER",
+            "stale_configs" : false,
+            "state" : "STARTED"
+          }
+        }
+      ]
+    }
+  ]
+}GET /api/v1/persist/wizard-data?_=1508216655087 HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+X-Requested-By: X-Requested-By
+X-Requested-With: XMLHttpRequest
+Cookie: AMBARISESSIONID=gk9nikcousx41fxr7ln03v5ch
+Connection: keep-alive
+
+HTTP/1.1 200 OK
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Cache-Control: no-store
+Pragma: no-cache
+User: admin
+Content-Type: text/plain
+Content-Encoding: gzip
+Vary: Accept-Encoding, User-Agent
+Content-Length: 24
+
+nullGET /api/v1/clusters/mycluster/alerts?format=groupedSummary&_=1508216655615 HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:8080/
+Cookie: AMBARISESSIONID=gk9nikcousx41fxr7ln03v5ch
+Connection: keep-alive
+
+HTTP/1.1 200 OK
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Cache-Control: no-store
+Pragma: no-cache
+User: admin
+Content-Type: text/plain
+Content-Encoding: gzip
+Vary: Accept-Encoding, User-Agent
+Content-Length: 2205
+
+{
+  "href" : "http://localhost:8080/api/v1/clusters/mycluster/alerts?format=groupedSummary&_=1508216655615",
+  "alerts_summary_grouped" : [
+    {
+      "definition_id" : 1,
+      "definition_name" : "zookeeper_server_process_percent",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508214191859,
+          "maintenance_count" : 0,
+          "latest_text" : "affected: [0], total: [1]"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 136,
+      "definition_name" : "namenode_cpu",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215511542,
+          "maintenance_count" : 0,
+          "latest_text" : "4 CPU, load 29.2%"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 3,
+      "definition_name" : "ams_metrics_monitor_process",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508214190362,
+          "maintenance_count" : 0,
+          "latest_text" : "Ambari Monitor is running on master"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 137,
+      "definition_name" : "secondary_namenode_process",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331704,
+          "maintenance_count" : 0,
+          "latest_text" : "HTTP 200 response in 0.000s"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 4,
+      "definition_name" : "ams_metrics_collector_process",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508214550327,
+          "maintenance_count" : 0,
+          "latest_text" : "TCP OK - 0.000s response on port 6188"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 138,
+      "definition_name" : "namenode_hdfs_pending_deletion_blocks",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331559,
+          "maintenance_count" : 0,
+          "latest_text" : "Pending Deletion Blocks:[0]"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 13,
+      "definition_name" : "smartsense_long_running_bundle",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1507942620763,
+          "maintenance_count" : 0,
+          "latest_text" : "All bundles are on track."
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 15,
+      "definition_name" : "ambari_agent_version_select",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1507859878911,
+          "maintenance_count" : 0,
+          "latest_text" : "hdp-select \nreported the following versions: 2.6.2.0-205"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 14,
+      "definition_name" : "infra_solr",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508214250462,
+          "maintenance_count" : 0,
+          "latest_text" : "HTTP 200 response in 0.000s"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 6,
+      "definition_name" : "ams_metrics_collector_hbase_master_cpu",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1507941178766,
+          "maintenance_count" : 0,
+          "latest_text" : "4 CPU, load 16.4%"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 141,
+      "definition_name" : "datanode_heap_usage",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331699,
+          "maintenance_count" : 0,
+          "latest_text" : "Used Heap:[8%, 83.54335 MB], Max Heap: 1004.0 MB"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 7,
+      "definition_name" : "metrics_monitor_process_percent",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508214191865,
+          "maintenance_count" : 0,
+          "latest_text" : "affected: [0], total: [1]"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 16,
+      "definition_name" : "ambari_agent_disk_usage",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1507859638759,
+          "maintenance_count" : 0,
+          "latest_text" : "Capacity Used: [8.98%, 47.1 GB], Capacity Total: [524.5 GB], path=/usr/hdp"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 8,
+      "definition_name" : "ams_metrics_collector_autostart",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508216590371,
+          "maintenance_count" : 0,
+          "latest_text" : "Metrics Collector has not been auto-started and is running normally."
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 142,
+      "definition_name" : "datanode_health_summary",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331579,
+          "maintenance_count" : 0,
+          "latest_text" : "All 1 DataNode(s) are healthy"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 143,
+      "definition_name" : "datanode_unmounted_data_dir",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331664,
+          "maintenance_count" : 0,
+          "latest_text" : "The following data dir(s) are valid:\n/hadoop/hdfs/data"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 145,
+      "definition_name" : "datanode_process",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331579,
+          "maintenance_count" : 0,
+          "latest_text" : "TCP OK - 0.000s response on port 50010"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 17,
+      "definition_name" : "ambari_server_agent_heartbeat",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1507859742616,
+          "maintenance_count" : 0,
+          "latest_text" : "master is healthy"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 147,
+      "definition_name" : "namenode_hdfs_blocks_health",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331603,
+          "maintenance_count" : 0,
+          "latest_text" : "Total Blocks:[1], Missing Blocks:[0]"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 148,
+      "definition_name" : "namenode_webui",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331722,
+          "maintenance_count" : 0,
+          "latest_text" : "HTTP 200 response in 0.000s"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 149,
+      "definition_name" : "datanode_webui",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331723,
+          "maintenance_count" : 0,
+          "latest_text" : "HTTP 200 response in 0.000s"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 150,
+      "definition_name" : "datanode_storage",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331697,
+          "maintenance_count" : 0,
+          "latest_text" : "Remaining Capacity:[432290161664], Total Capacity:[6% Used, 458958115840]"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 152,
+      "definition_name" : "nfsgateway_process",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331594,
+          "maintenance_count" : 0,
+          "latest_text" : "TCP OK - 0.000s response on port 2049"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 2,
+      "definition_name" : "zookeeper_server_process",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508214190345,
+          "maintenance_count" : 0,
+          "latest_text" : "TCP OK - 0.000s response on port 2181"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 155,
+      "definition_name" : "namenode_client_rpc_queue_latency_hourly",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215511598,
+          "maintenance_count" : 0,
+          "latest_text" : "There were no data points above the minimum threshold of 30 seconds"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 10,
+      "definition_name" : "smartsense_server_process",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1507859641631,
+          "maintenance_count" : 0,
+          "latest_text" : "SmartSense HST Server connection successful  - 0.000s response on port 9000"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 19,
+      "definition_name" : "ambari_server_component_version",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215560668,
+          "maintenance_count" : 0,
+          "latest_text" : "All components are reporting their expected versions."
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 156,
+      "definition_name" : "datanode_storage_percent",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215333022,
+          "maintenance_count" : 0,
+          "latest_text" : "affected: [0], total: [1]"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 158,
+      "definition_name" : "upgrade_finalized_state",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331713,
+          "maintenance_count" : 0,
+          "latest_text" : "HDFS cluster is not in the upgrade state"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 159,
+      "definition_name" : "namenode_client_rpc_processing_latency_hourly",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215511604,
+          "maintenance_count" : 0,
+          "latest_text" : "There were no data points above the minimum threshold of 30 seconds"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 9,
+      "definition_name" : "grafana_webui",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508216352208,
+          "maintenance_count" : 0,
+          "latest_text" : "HTTP 200 response in 0.000s"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 163,
+      "definition_name" : "namenode_directory_status",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331707,
+          "maintenance_count" : 0,
+          "latest_text" : "Directories are healthy"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 11,
+      "definition_name" : "smartsense_bundle_failed_or_timedout",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1507942440868,
+          "maintenance_count" : 0,
+          "latest_text" : "Last SmartSense bundle is in good state."
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 18,
+      "definition_name" : "ambari_server_performance",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1507859922677,
+          "maintenance_count" : 0,
+          "latest_text" : "Performance Overview:\n  Database Access (Request By Status): 0ms (OK)\n  Database Access (Task Status Aggregation): 0ms (OK)\n  REST API (Cluster): 5ms (OK)"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 166,
+      "definition_name" : "datanode_process_percent",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215333015,
+          "maintenance_count" : 0,
+          "latest_text" : "affected: [0], total: [1]"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 167,
+      "definition_name" : "namenode_hdfs_capacity_utilization",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331714,
+          "maintenance_count" : 0,
+          "latest_text" : "Capacity Used:[0%, 45056], Capacity Remaining:[432290161664]"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 169,
+      "definition_name" : "namenode_last_checkpoint",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331721,
+          "maintenance_count" : 0,
+          "latest_text" : "Last Checkpoint: [0 hours, 22 minutes, 13 transactions]"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 168,
+      "definition_name" : "namenode_rpc_latency",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508215331708,
+          "maintenance_count" : 0,
+          "latest_text" : "Average Queue Time:[0.5], Average Processing Time:[0.0]"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 12,
+      "definition_name" : "smartsense_gateway_status",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508216351620,
+          "maintenance_count" : 0,
+          "latest_text" : "SmartSense embedded gateway is active."
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 5,
+      "definition_name" : "ams_metrics_collector_hbase_master_process",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1508211490490,
+          "maintenance_count" : 0,
+          "latest_text" : "TCP OK - 0.000s response on port 61310"
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    },
+    {
+      "definition_id" : 20,
+      "definition_name" : "ambari_server_stale_alerts",
+      "summary" : {
+        "OK" : {
+          "count" : 1,
+          "original_timestamp" : 1507859922630,
+          "maintenance_count" : 0,
+          "latest_text" : "All alerts have run within their time intervals."
+        },
+        "WARNING" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "CRITICAL" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        },
+        "UNKNOWN" : {
+          "count" : 0,
+          "original_timestamp" : 0,
+          "maintenance_count" : 0
+        }
+      }
+    }
+  ]
+}
