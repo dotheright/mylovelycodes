@@ -1,0 +1,38 @@
+{
+    "MyKubernetes": {
+        "Component": [
+            {
+                "type": "ganglia",
+                "metrics": {
+                    "default": {
+                        "metrics/mtest": {
+                            "metric": "mtest",
+                            "pointInTime": true,
+                            "temporal": true
+                        },
+                        "metrics/mtest1": {
+                            "metric": "mtest1",
+                            "pointInTime": true,
+                            "temporal": true
+                        },
+                        "metrics/mtest2": {
+                            "metric": "mtest2",
+                            "pointInTime": true,
+                            "temporal": true
+                        },
+                        "metrics/mtest3": {
+                            "metric": "mtest3",
+                            "pointInTime": true,
+                            "temporal": true
+                        },
+                        "metrics/mtest4": {
+                            "metric": "mtest4",
+                            "pointInTime": true,
+                            "temporal": true
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
