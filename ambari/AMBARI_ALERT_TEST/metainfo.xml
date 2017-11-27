@@ -1,0 +1,41 @@
+<metainfo>
+ <schemaVersion>2.0</schemaVersion>
+ <services>
+
+ <configuration-dependencies>
+<config-type>ambari-server-env</config-type>
+ </configuration-dependencies>
+ <service>
+ <name>ALERT_TEST</name>
+ <displayName>MyKubernetes</displayName>
+ <comment>Service definition for alert</comment>
+ <version>0.1</version>
+ <components>
+ <component>
+ <name>MyKubernetes</name>
+ <displayName>My Kubernetes</displayName>
+ <category>MASTER</category>
+ <cardinality>1</cardinality>
+ <timelineAppid>k8s_test</timelineAppid>
+ <commandScript>
+ <script>scripts/master/master.py</script>
+ <scriptType>PYTHON</scriptType>
+ <timeout>600</timeout>
+ </commandScript>
+ </component>
+ </components>
+ <osSpecifics>
+ <osSpecific>
+ <osFamily>any</osFamily> 
+ </osSpecific>
+ </osSpecifics>
+
+ <themes>
+      <theme>
+        <fileName>themes/theme.json</fileName>
+        <default>true</default>
+      </theme>
+ </themes>
+ </service>
+ </services>
+</metainfo>

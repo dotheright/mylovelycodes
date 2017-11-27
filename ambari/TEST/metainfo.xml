@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metainfo> 
+  <schemaVersion>2.0</schemaVersion>  
+  <services> 
+    <service> 
+      <name>TEST</name>  
+      <displayName>My service test</displayName>  
+      <comment>My service test v1</comment>  
+      <version>1.0</version>  
+      <components> 
+        <component> 
+          <name>mymaster</name>  
+          <displayName>my master</displayName>  
+          <category>MASTER</category>  
+          <cardinality>1</cardinality>  
+          <commandScript> 
+            <script>scripts/master.py</script>  
+            <scriptType>PYTHON</scriptType>  
+            <timeout>3000</timeout> 
+          </commandScript> 
+        </component>  
+        <component> 
+          <name>my slave</name>  
+          <displayName>my slave</displayName>  
+          <category>SLAVE</category>  
+          <cardinality>1+</cardinality>  
+          <commandScript> 
+            <script>scripts/slave.py</script>  
+            <scriptType>PYTHON</scriptType>  
+            <timeout>3000</timeout> 
+          </commandScript> 
+        </component> 
+      </components>  
+      <osSpecifics> 
+        <osSpecific> 
+          <osFamily>redhat6,debian7,ubuntu12,ubuntu14,ubuntu16</osFamily>
+        </osSpecific> 
+      </osSpecifics> 
+    </service> 
+  </services> 
+</metainfo>

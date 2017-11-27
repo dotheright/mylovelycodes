@@ -1,0 +1,305 @@
+{
+    "layouts": [
+        {
+            "layout_name": "default_Kubernetes_dashboard",
+            "display_name": "Standard Kubernetes Dashboard",
+            "section_name": "K8S_SUMMARY",
+            "widgetLayoutInfo": [
+                {
+                    "widget_name": "Kubernetes",
+                    "description": "Kubernetes widgets",
+                    "widget_type": "GRAPH",
+                    "is_visible": true,
+                    "metrics": [
+                        {
+                            "name": "pending jobs",
+                            "metric_path": "metrics/mtest1",
+                            "service_name": "K8S_SRV",
+                            "component_name": "K8S_COM"
+                        },
+                        {
+                            "name": "waiting jobs",
+                            "metric_path": "metrics/mtest1",
+                            "service_name": "K8S_SRV",
+                            "component_name": "K8S_COM"
+                        },
+                        {
+                            "name": "running jobs",
+                            "metric_path": "metrics/mtest2",
+                            "service_name": "K8S_SRV",
+                            "component_name": "K8S_COM"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "name": "pending jobs",
+                            "value": "10"
+                        },
+                        {
+                            "name": "waiting jobs",
+                            "value": "30"
+                        },
+                        {
+                            "name": "running jobs",
+                            "value": "20"
+                        }
+                    ],
+                    "properties": {
+                        "graph_type": "LINE",
+                        "time_range": "1"
+                    }
+                },
+                {
+                    "widget_name": "failed jobs",
+                    "description": "The number of failed jobs.",
+                    "widget_type": "NUMBER",
+                    "is_visible": true,
+                    "metrics": [
+                        {
+                            "name": "number Test",
+                            "metric_path": "metrics/test4",
+                            "service_name": "K8S_SRV",
+                            "component_name": "K8S_COM"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "name": "failed jobs",
+                            "value": "30"
+                        }
+                    ],
+                    "properties": {
+                        "warning_threshold": "20",
+                        "error_threshold": "50"
+                    }
+                },
+                {
+                    "widget_name": "terminated jobs",
+                    "description": "The number of terminated jobs.",
+                    "widget_type": "NUMBER",
+                    "is_visible": true,
+                    "metrics": [
+                        {
+                            "name": "number Test",
+                            "metric_path": "metrics/test4",
+                            "service_name": "K8S_SRV",
+                            "component_name": "K8S_COM"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "name": "terminated jobs",
+                            "value": "30"
+                        }
+                    ],
+                    "properties": {
+                        "warning_threshold": "20",
+                        "error_threshold": "50"
+                    }
+                },
+                {
+                    "widget_name": "completed jobs",
+                    "description": "The number of completed jobs.",
+                    "widget_type": "NUMBER",
+                    "is_visible": true,
+                    "metrics": [
+                        {
+                            "name": "number Test",
+                            "metric_path": "metrics/test4",
+                            "service_name": "K8S_SRV",
+                            "component_name": "K8S_COM"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "name": "completed jobs",
+                            "value": "30"
+                        }
+                    ],
+                    "properties": {
+                        "warning_threshold": "20",
+                        "error_threshold": "50"
+                    }
+                },
+                {
+                    "widget_name": "CPU/GPU allocating rate",
+                    "description": "CPU/GPU allocating rate",
+                    "widget_type": "GRAPH",
+                    "is_visible": true,
+                    "metrics": [
+                        {
+                            "name": "CPU allocating rate",
+                            "metric_path": "metrics/mtest1",
+                            "service_name": "K8S_SRV",
+                            "component_name": "K8S_COM"
+                        },
+                        {
+                            "name": "GPU allocating rate",
+                            "metric_path": "metrics/mtest3",
+                            "service_name": "K8S_SRV",
+                            "component_name": "K8S_COM"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "name": "CPU allocating rate",
+                            "value": "0.1"
+                        },
+                        {
+                            "name": "CPU allocating rate",
+                            "value": "0.2"
+                        }
+                    ],
+                    "properties": {
+                        "graph_type": "LINE",
+                        "time_range": "1",
+                        "display_unit": "%"
+                    }
+                },
+                {
+                    "name": "pending pobs",
+                    "metric_path": "metrics/mtest1",
+                    "service_name": "K8S_SRV",
+                    "component_name": "K8S_COM"
+                },
+                {
+                    "name": "waiting pobs",
+                    "metric_path": "metrics/mtest1",
+                    "service_name": "K8S_SRV",
+                    "component_name": "K8S_COM"
+                },
+                {
+                    "name": "running pobs",
+                    "metric_path": "metrics/mtest2",
+                    "service_name": "K8S_SRV",
+                    "component_name": "K8S_COM"
+                }
+            ],
+            "values": [
+                {
+                    "name": "pending pobs",
+                    "value": "10"
+                },
+                {
+                    "name": "waiting pobs",
+                    "value": "30"
+                },
+                {
+                    "name": "running pobs",
+                    "value": "20"
+                }
+            ],
+            "properties": {
+                "graph_type": "LINE",
+                "time_range": "1"
+            }
+        },
+        {
+            "widget_name": "failed pobs",
+            "description": "The number of failed pobs.",
+            "widget_type": "NUMBER",
+            "is_visible": true,
+            "metrics": [
+                {
+                    "name": "number Test",
+                    "metric_path": "metrics/test4",
+                    "service_name": "K8S_SRV",
+                    "component_name": "K8S_COM"
+                }
+            ],
+            "values": [
+                {
+                    "name": "failed pobs",
+                    "value": "30"
+                }
+            ],
+            "properties": {
+                "warning_threshold": "20",
+                "error_threshold": "50"
+            }
+        },
+        {
+            "widget_name": "terminated pobs",
+            "description": "The number of terminated pobs.",
+            "widget_type": "NUMBER",
+            "is_visible": true,
+            "metrics": [
+                {
+                    "name": "number Test",
+                    "metric_path": "metrics/test4",
+                    "service_name": "K8S_SRV",
+                    "component_name": "K8S_COM"
+                }
+            ],
+            "values": [
+                {
+                    "name": "terminated pobs",
+                    "value": "30"
+                }
+            ],
+            "properties": {
+                "warning_threshold": "20",
+                "error_threshold": "50"
+            }
+        },
+        {
+            "widget_name": "completed pobs",
+            "description": "The number of completed pobs.",
+            "widget_type": "NUMBER",
+            "is_visible": true,
+            "metrics": [
+                {
+                    "name": "number Test",
+                    "metric_path": "metrics/test4",
+                    "service_name": "K8S_SRV",
+                    "component_name": "K8S_COM"
+                }
+            ],
+            "values": [
+                {
+                    "name": "completed pobs",
+                    "value": "30"
+                }
+            ],
+            "properties": {
+                "warning_threshold": "20",
+                "error_threshold": "50"
+            }
+        },
+        {
+            "widget_name": "Memory/GPUMemory allocating rate",
+            "description": "CPU/GPUMemory allocating rate",
+            "widget_type": "GRAPH",
+            "is_visible": true,
+            "metrics": [
+                {
+                    "name": "Memory allocating rate",
+                    "metric_path": "metrics/mtest1",
+                    "service_name": "K8S_SRV",
+                    "component_name": "K8S_COM"
+                },
+                {
+                    "name": "GPU Memory allocating rate",
+                    "metric_path": "metrics/mtest3",
+                    "service_name": "K8S_SRV",
+                    "component_name": "K8S_COM"
+                }
+            ],
+            "values": [
+                {
+                    "name": "Memory allocating rate",
+                    "value": "0.1"
+                },
+                {
+                    "name": "GPU Memory allocating rate",
+                    "value": "0.2"
+                }
+            ],
+            "properties": {
+                "graph_type": "LINE",
+                "time_range": "1",
+                "display_unit": "%"
+            }
+        }
+    ]
+}
