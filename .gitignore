@@ -66,6 +66,7 @@ Module.symvers
 # tar directory (make tar*-pkg)
 #
 /tar-install/
+/node_modules/
 
 #
 # git files that we don't want to ignore even if they are dot-files
