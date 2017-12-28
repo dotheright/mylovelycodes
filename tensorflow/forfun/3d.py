@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import numpy as np;
 
 from matplotlib import pyplot as plt;
@@ -19,7 +21,6 @@ Z = np.sqrt(X**2 + Y**2)
 print  X.shape
 print  Y.shape
 print  Z.shape
-
+ax.view_init(0,90)
 ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='rainbow')
 plt.show()
-
