@@ -9,7 +9,7 @@ plt.xlabel("x label")
 plt.ylabel("y label")
 plt.title("para-curve")
 x = np.arange(-4, 4.1, 0.25)
-plt.plot(x,x**2);
+plt.plot(x,np.sinx**2);
 '''
 for i in range(6):
     plt.plot(x,np.exp(i*x/3));
