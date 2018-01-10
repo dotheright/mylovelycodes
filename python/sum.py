@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-sum=0
-for  a   in  range(101):
-    sum=sum+a
-print a,sum
+sum = 0
+for a in  range(101):
+    sum = sum+a
+print a , sum
 
 
 def myprint(s,a):

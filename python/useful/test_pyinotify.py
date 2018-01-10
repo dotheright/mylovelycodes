@@ -20,7 +20,6 @@ class EventHandler(ProcessEvent):
         print  "CLOSE_WRITE file: %s " %  os.path.join(event.path,event.name)
     def process_IN_MOVED_TO(self, event):
         print  "MOVED_TO file: %s " %  os.path.join(event.path,event.name)
-
     def process_IN_DELETE(self, event):
         print  "Delete file: %s " %  os.path.join(event.path,event.name)
     def process_IN_MOVED_FROM(self, event):
