@@ -44,6 +44,11 @@ Module.symvers
 *.su
 *.c.[012]*.*
 
+/golang/bin
+/golang/src/github.com
+/golang/src/golang.org
+/golang/src/gopl.io
+
 #
 # Top-level generic files
 #
